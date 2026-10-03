@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien
 {
-    public partial class fTrangChu : Form
+    public partial class fQuanLyDiem : Form
     {
-        public fTrangChu()
+        public fQuanLyDiem()
         {
             InitializeComponent();
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
