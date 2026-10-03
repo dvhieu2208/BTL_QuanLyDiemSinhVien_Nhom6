@@ -8,3 +8,4 @@ C:\Users\My Laptop\Documents\BTL_Nhom6\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj
 C:\Users\My Laptop\Documents\BTL_Nhom6\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.exe
 C:\Users\My Laptop\Documents\BTL_Nhom6\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.pdb
 C:\Users\My Laptop\Documents\BTL_Nhom6\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.fDangNhap.resources
+C:\Users\My Laptop\Documents\BTL_Nhom6\QuanLyDiemSinhVien\QuanLyDiemSinhVien\obj\Debug\QuanLyDiemSinhVien.fTrangChu.resources

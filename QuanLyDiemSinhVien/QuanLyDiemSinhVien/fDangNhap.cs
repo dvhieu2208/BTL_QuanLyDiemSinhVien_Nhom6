@@ -30,7 +30,8 @@ namespace QuanLyDiemSinhVien
 
         private void btnDangNhap_Click(object sender, EventArgs e)
         {
-
+            fTrangChu fTrangChu = new fTrangChu();
+            fTrangChu.ShowDialog();
         }
     }
 }
