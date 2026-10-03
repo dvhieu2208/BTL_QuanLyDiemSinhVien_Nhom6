@@ -1,0 +1,69 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|c:\\users\\my laptop\\documents\\btl_nhom6\\quanlydiemsinhvien\\quanlydiemsinhvien\\ftrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|solutionrelative:quanlydiemsinhvien\\ftrangchu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|c:\\users\\my laptop\\documents\\btl_nhom6\\quanlydiemsinhvien\\quanlydiemsinhvien\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|solutionrelative:quanlydiemsinhvien\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|c:\\users\\my laptop\\documents\\btl_nhom6\\quanlydiemsinhvien\\quanlydiemsinhvien\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0DDAE7A3-EB5F-4C2B-ACDD-AF66F4364024}|QuanLyDiemSinhVien\\QuanLyDiemSinhVien.csproj|solutionrelative:quanlydiemsinhvien\\fdangnhap.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "fTrangChu.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fTrangChu.cs",
+              "RelativeDocumentMoniker": "QuanLyDiemSinhVien\\fTrangChu.cs",
+              "ToolTip": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fTrangChu.cs [Design]",
+              "RelativeToolTip": "QuanLyDiemSinhVien\\fTrangChu.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T06:24:55.154Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "fDangNhap.cs",
+              "DocumentMoniker": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fDangNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyDiemSinhVien\\fDangNhap.cs",
+              "ToolTip": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fDangNhap.cs",
+              "RelativeToolTip": "QuanLyDiemSinhVien\\fDangNhap.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T05:04:54.179Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "fDangNhap.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fDangNhap.cs",
+              "RelativeDocumentMoniker": "QuanLyDiemSinhVien\\fDangNhap.cs",
+              "ToolTip": "C:\\Users\\My Laptop\\Documents\\BTL_Nhom6\\QuanLyDiemSinhVien\\QuanLyDiemSinhVien\\fDangNhap.cs [Design]",
+              "RelativeToolTip": "QuanLyDiemSinhVien\\fDangNhap.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-03T04:52:32.56Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
