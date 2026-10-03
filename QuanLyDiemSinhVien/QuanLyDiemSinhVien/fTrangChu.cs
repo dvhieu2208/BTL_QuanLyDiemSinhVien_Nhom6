@@ -21,5 +21,11 @@ namespace QuanLyDiemSinhVien
         {
 
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            fQuanLyDiem fQuanLyDiem = new fQuanLyDiem();
+            fQuanLyDiem.ShowDialog();
+        }
     }
 }
