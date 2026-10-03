@@ -61,6 +61,12 @@
     <Compile Include="fQuanLyDiem.Designer.cs">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="fSinhVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fSinhVien.Designer.cs">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="fTrangChu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fQuanLyDiem.resx">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="fSinhVien.resx">
+      <DependentUpon>fSinhVien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="fTrangChu.resx">
       <DependentUpon>fTrangChu.cs</DependentUpon>

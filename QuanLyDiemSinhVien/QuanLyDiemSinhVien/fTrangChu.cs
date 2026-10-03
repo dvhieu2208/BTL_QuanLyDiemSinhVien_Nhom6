@@ -19,7 +19,9 @@ namespace QuanLyDiemSinhVien
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            fSinhVien fSinhVien = new fSinhVien();
+            fSinhVien.ShowDialog();
+            fSinhVien.Dispose();
         }
 
         private void button4_Click(object sender, EventArgs e)
