@@ -56,9 +56,11 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.label13 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label12 = new System.Windows.Forms.Label();
@@ -71,9 +73,7 @@
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -83,8 +83,8 @@
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel8.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -442,6 +442,15 @@
             this.panel6.Size = new System.Drawing.Size(207, 84);
             this.panel6.TabIndex = 13;
             // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(4, 45);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(200, 28);
+            this.comboBox1.TabIndex = 8;
+            // 
             // btnTimKiem
             // 
             this.btnTimKiem.BackColor = System.Drawing.Color.DodgerBlue;
@@ -479,14 +488,25 @@
             this.panel7.Location = new System.Drawing.Point(201, 224);
             this.panel7.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(389, 208);
+            this.panel7.Size = new System.Drawing.Size(389, 158);
             this.panel7.TabIndex = 16;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
+            this.pictureBox3.Location = new System.Drawing.Point(40, 19);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(103, 97);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(173, 168);
+            this.label13.Location = new System.Drawing.Point(173, 117);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(62, 20);
@@ -497,7 +517,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(173, 74);
+            this.label11.Location = new System.Drawing.Point(173, 57);
             this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(62, 20);
@@ -508,7 +528,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(173, 121);
+            this.label12.Location = new System.Drawing.Point(172, 87);
             this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(62, 20);
@@ -539,14 +559,14 @@
             this.panel8.Location = new System.Drawing.Point(640, 224);
             this.panel8.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(398, 208);
+            this.panel8.Size = new System.Drawing.Size(398, 158);
             this.panel8.TabIndex = 17;
             // 
             // label20
             // 
             this.label20.AutoSize = true;
             this.label20.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label20.Location = new System.Drawing.Point(272, 166);
+            this.label20.Location = new System.Drawing.Point(153, 116);
             this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label20.Name = "label20";
             this.label20.Size = new System.Drawing.Size(62, 20);
@@ -557,7 +577,7 @@
             // 
             this.label19.AutoSize = true;
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label19.Location = new System.Drawing.Point(272, 119);
+            this.label19.Location = new System.Drawing.Point(153, 85);
             this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(62, 20);
@@ -568,7 +588,7 @@
             // 
             this.label18.AutoSize = true;
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label18.Location = new System.Drawing.Point(272, 72);
+            this.label18.Location = new System.Drawing.Point(153, 54);
             this.label18.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(62, 20);
@@ -579,7 +599,7 @@
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(69, 119);
+            this.label17.Location = new System.Drawing.Point(13, 84);
             this.label17.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(101, 20);
@@ -590,7 +610,7 @@
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(102, 166);
+            this.label16.Location = new System.Drawing.Point(13, 116);
             this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(74, 20);
@@ -601,7 +621,7 @@
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(28, 72);
+            this.label15.Location = new System.Drawing.Point(13, 54);
             this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(132, 20);
@@ -613,42 +633,22 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.DarkBlue;
-            this.label14.Location = new System.Drawing.Point(27, 22);
+            this.label14.Location = new System.Drawing.Point(12, 19);
             this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(164, 25);
             this.label14.TabIndex = 0;
             this.label14.Text = "Kết quả học tập";
             // 
-            // pictureBox3
-            // 
-            this.pictureBox3.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(40, 19);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(103, 97);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
-            // 
             // dataGridView1
             // 
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(201, 449);
+            this.dataGridView1.Location = new System.Drawing.Point(201, 388);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1010, 277);
+            this.dataGridView1.Size = new System.Drawing.Size(1010, 338);
             this.dataGridView1.TabIndex = 18;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(4, 45);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(200, 28);
-            this.comboBox1.TabIndex = 8;
             // 
             // fXemBangDiem
             // 
@@ -687,9 +687,9 @@
             this.panel6.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
