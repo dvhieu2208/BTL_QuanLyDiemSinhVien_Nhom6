@@ -105,10 +105,10 @@
             // 
             this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 17);
+            this.pictureBox1.Location = new System.Drawing.Point(13, 11);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(82, 62);
+            this.pictureBox1.Size = new System.Drawing.Size(51, 46);
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
@@ -118,7 +118,7 @@
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(156, 75);
+            this.label1.Location = new System.Drawing.Point(95, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(249, 19);
@@ -131,7 +131,7 @@
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(108, 19);
+            this.label2.Location = new System.Drawing.Point(66, 11);
             this.label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(315, 32);
@@ -414,7 +414,7 @@
             this.panel4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.cboHocKy);
-            this.panel4.Location = new System.Drawing.Point(216, 126);
+            this.panel4.Location = new System.Drawing.Point(201, 126);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(207, 84);
@@ -425,7 +425,7 @@
             this.panel5.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel5.Controls.Add(this.cboLop);
             this.panel5.Controls.Add(this.label7);
-            this.panel5.Location = new System.Drawing.Point(464, 126);
+            this.panel5.Location = new System.Drawing.Point(449, 126);
             this.panel5.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(207, 84);
@@ -436,7 +436,7 @@
             this.panel6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.panel6.Controls.Add(this.comboBox1);
             this.panel6.Controls.Add(this.label8);
-            this.panel6.Location = new System.Drawing.Point(712, 126);
+            this.panel6.Location = new System.Drawing.Point(697, 126);
             this.panel6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(207, 84);
@@ -498,7 +498,7 @@
             this.pictureBox3.Location = new System.Drawing.Point(40, 19);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(103, 97);
+            this.pictureBox3.Size = new System.Drawing.Size(87, 97);
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
