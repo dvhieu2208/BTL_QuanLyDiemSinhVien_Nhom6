@@ -43,6 +43,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
+            this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -73,6 +74,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(106, 449);
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '*';
             this.txtMatKhau.Size = new System.Drawing.Size(452, 30);
             this.txtMatKhau.TabIndex = 3;
             // 
@@ -109,6 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.panel1.Controls.Add(this.chkHienMatKhau);
             this.panel1.Controls.Add(this.lkQuenMatKhau);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnDangNhap);
@@ -207,6 +210,16 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Trường đại học Giao Thông Vận Tải";
             // 
+            // chkHienMatKhau
+            // 
+            this.chkHienMatKhau.AutoSize = true;
+            this.chkHienMatKhau.Location = new System.Drawing.Point(564, 456);
+            this.chkHienMatKhau.Name = "chkHienMatKhau";
+            this.chkHienMatKhau.Size = new System.Drawing.Size(18, 17);
+            this.chkHienMatKhau.TabIndex = 7;
+            this.chkHienMatKhau.UseVisualStyleBackColor = true;
+            this.chkHienMatKhau.CheckedChanged += new System.EventHandler(this.chkHienMatKhau_CheckedChanged);
+            // 
             // fDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -219,6 +232,7 @@
             this.Name = "fDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Đăng nhập -Quản lý điểm sinh viên";
+            this.Load += new System.EventHandler(this.fDangNhap_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -245,6 +259,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel lkQuenMatKhau;
+        private System.Windows.Forms.CheckBox chkHienMatKhau;
     }
 }
 

@@ -35,5 +35,16 @@ namespace QuanLyDiemSinhVien
             fXemBangDiem fxembangdiem = new fXemBangDiem();
             fxembangdiem.ShowDialog();
         }
+
+        private void fTrangChu_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            fThongKe fthongke = new fThongKe();
+            fthongke.ShowDialog();
+        }
     }
 }

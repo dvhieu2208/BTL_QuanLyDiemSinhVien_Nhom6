@@ -59,7 +59,7 @@ namespace QuanLyDiemSinhVien
 
         private void fThongKe_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -68,6 +68,21 @@ namespace QuanLyDiemSinhVien
         }
 
         private void chart2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }

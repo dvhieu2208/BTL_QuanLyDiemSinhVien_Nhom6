@@ -237,6 +237,7 @@
             this.button7.TabIndex = 0;
             this.button7.Text = "Báo cáo";
             this.button7.UseVisualStyleBackColor = false;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
             // button6
             // 
@@ -575,6 +576,7 @@
             this.Name = "fTrangChu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fTrangChu";
+            this.Load += new System.EventHandler(this.fTrangChu_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

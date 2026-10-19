@@ -53,7 +53,6 @@ CREATE TABLE PhongHoc (
 );
 GO
 
--- 2. Tao cac bang Quan he
 CREATE TABLE Khoa_ChuyenNganh (
     MaChuyenNganh  VARCHAR(10)   NOT NULL PRIMARY KEY,
     MaKhoa          VARCHAR(10)   NOT NULL,
@@ -67,7 +66,7 @@ CREATE TABLE Lop (
     TenLop  NVARCHAR(100) NOT NULL,
     MaKhoa  VARCHAR(10)   NOT NULL,
     KhoaHoc VARCHAR(20),
-    SiSo    INT,
+    SiSo    INT DEFAULT 0,
     CONSTRAINT FK_Lop_Khoa FOREIGN KEY (MaKhoa) REFERENCES Khoa(MaKhoa)
 );
 GO
@@ -199,11 +198,11 @@ INSERT INTO Khoa_ChuyenNganh (MaChuyenNganh, MaKhoa, TenChuyenNganh) VALUES
 GO
 
 INSERT INTO Lop (MaLop, TenLop, MaKhoa, KhoaHoc, SiSo) VALUES
-('CNTT01', N'Công nghệ thông tin 01', 'CNTT','K2025', 59),
-('CNTT02', N'Công nghệ thông tin 02', 'CNTT','K2025', 53),
-('CNTT03', N'Công nghệ thông tin 03', 'CNTT','K2025', 60),
-('CNTT04', N'Công nghệ thông tin 04', 'CNTT','K2026', 66),
-('CNTT05', N'Công nghệ thông tin 05', 'CNTT','K2026', 57);
+('CNTT01', N'Công nghệ thông tin 01', 'CNTT','K2025', 9),
+('CNTT02', N'Công nghệ thông tin 02', 'CNTT','K2025', 11),
+('CNTT03', N'Công nghệ thông tin 03', 'CNTT','K2025', 10),
+('CNTT04', N'Công nghệ thông tin 04', 'CNTT','K2026', 10),
+('CNTT05', N'Công nghệ thông tin 05', 'CNTT','K2026', 10);
 GO
 
 INSERT INTO SinhVien (MaSV, TenSV, MaKhoa, MaLop, NgaySinh, GioiTinh, MaQue, MaDanToc, MaChuyenNganh, MaHeDT, MaChucVu) VALUES
