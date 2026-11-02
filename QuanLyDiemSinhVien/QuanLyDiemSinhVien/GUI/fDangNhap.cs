@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using QuanLyDiemSinhVien.BLL;
+using QuanLyDiemSinhVien.GUI;
 
 
 namespace QuanLyDiemSinhVien
@@ -43,7 +44,7 @@ namespace QuanLyDiemSinhVien
 
             bool kq = bll.DangNhap(taiKhoan, matKhau);
             if (kq)
-            { 
+            {
                 fTrangChu trangChu = new fTrangChu();
                 this.Hide();
                 trangChu.ShowDialog();
@@ -62,16 +63,25 @@ namespace QuanLyDiemSinhVien
 
         }
 
-        private void chkHienMatKhau_CheckedChanged(object sender, EventArgs e)
+        bool isVisible = false;
+        private void button1_Click(object sender, EventArgs e)
         {
-            if (chkHienMatKhau.Checked)
+            isVisible = !isVisible;
+            if (isVisible)
             {
                 txtMatKhau.PasswordChar = '\0';
             }
             else
             {
-                txtMatKhau.PasswordChar = '*';
+                txtMatKhau.PasswordChar = '•';
             }
+        }
+
+        private void lkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            fQuenMatKhau quenMatKhau = new fQuenMatKhau();
+            quenMatKhau.ShowDialog();
+            this.Hide();
         }
     }
 }

@@ -43,7 +43,7 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.chkHienMatKhau = new System.Windows.Forms.CheckBox();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,9 +66,9 @@
             this.label1.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(106, 406);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(105, 26);
+            this.label1.Size = new System.Drawing.Size(99, 26);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Mật khẩu:";
+            this.label1.Text = "Mật khẩu";
             // 
             // txtMatKhau
             // 
@@ -84,9 +84,9 @@
             this.label2.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(106, 304);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(157, 26);
+            this.label2.Size = new System.Drawing.Size(151, 26);
             this.label2.TabIndex = 2;
-            this.label2.Text = "Tên đăng nhập:";
+            this.label2.Text = "Tên đăng nhập";
             // 
             // txtTenDangNhap
             // 
@@ -100,7 +100,7 @@
             this.btnDangNhap.BackColor = System.Drawing.Color.Navy;
             this.btnDangNhap.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDangNhap.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.btnDangNhap.Location = new System.Drawing.Point(260, 525);
+            this.btnDangNhap.Location = new System.Drawing.Point(261, 590);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(158, 44);
             this.btnDangNhap.TabIndex = 4;
@@ -111,7 +111,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.chkHienMatKhau);
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.lkQuenMatKhau);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.btnDangNhap);
@@ -133,12 +133,13 @@
             this.lkQuenMatKhau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lkQuenMatKhau.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
             this.lkQuenMatKhau.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lkQuenMatKhau.Location = new System.Drawing.Point(460, 597);
+            this.lkQuenMatKhau.Location = new System.Drawing.Point(113, 523);
             this.lkQuenMatKhau.Name = "lkQuenMatKhau";
             this.lkQuenMatKhau.Size = new System.Drawing.Size(98, 17);
             this.lkQuenMatKhau.TabIndex = 6;
             this.lkQuenMatKhau.TabStop = true;
             this.lkQuenMatKhau.Text = "Quên mật khẩu";
+            this.lkQuenMatKhau.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lkQuenMatKhau_LinkClicked);
             // 
             // label5
             // 
@@ -210,15 +211,17 @@
             this.label4.TabIndex = 6;
             this.label4.Text = "Trường đại học Giao Thông Vận Tải";
             // 
-            // chkHienMatKhau
+            // button1
             // 
-            this.chkHienMatKhau.AutoSize = true;
-            this.chkHienMatKhau.Location = new System.Drawing.Point(564, 456);
-            this.chkHienMatKhau.Name = "chkHienMatKhau";
-            this.chkHienMatKhau.Size = new System.Drawing.Size(18, 17);
-            this.chkHienMatKhau.TabIndex = 7;
-            this.chkHienMatKhau.UseVisualStyleBackColor = true;
-            this.chkHienMatKhau.CheckedChanged += new System.EventHandler(this.chkHienMatKhau_CheckedChanged);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(527, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "👁";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fDangNhap
             // 
@@ -259,7 +262,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.LinkLabel lkQuenMatKhau;
-        private System.Windows.Forms.CheckBox chkHienMatKhau;
+        private System.Windows.Forms.Button button1;
     }
 }
 

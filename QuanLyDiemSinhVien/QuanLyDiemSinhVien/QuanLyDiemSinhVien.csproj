@@ -82,6 +82,12 @@
     <Compile Include="GUI\fQuanLyMonHoc.Designer.cs">
       <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fQuenMatKhau.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuenMatKhau.Designer.cs">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fSinhVien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -119,6 +125,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fQuanLyMonHoc.resx">
       <DependentUpon>fQuanLyMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuenMatKhau.resx">
+      <DependentUpon>fQuenMatKhau.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fSinhVien.resx">
       <DependentUpon>fSinhVien.cs</DependentUpon>
