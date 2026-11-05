@@ -55,9 +55,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\TrangChuBLL.cs" />
     <Compile Include="DAL\DangNhapDAL.cs" />
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="DAL\SinhVienDAL.cs" />
+    <Compile Include="DAL\TrangChuDAL.cs" />
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -36,6 +36,7 @@
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.btnDangNhap = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
             this.lkQuenMatKhau = new System.Windows.Forms.LinkLabel();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +44,6 @@
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -54,9 +54,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(271, 78);
+            this.pictureBox2.Location = new System.Drawing.Point(271, 69);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(127, 117);
+            this.pictureBox2.Size = new System.Drawing.Size(127, 126);
             this.pictureBox2.TabIndex = 1;
             this.pictureBox2.TabStop = false;
             // 
@@ -127,8 +127,21 @@
             this.panel1.TabIndex = 2;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
+            // button1
+            // 
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(527, 449);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(31, 30);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "👁";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // lkQuenMatKhau
             // 
+            this.lkQuenMatKhau.ActiveLinkColor = System.Drawing.Color.Red;
             this.lkQuenMatKhau.AutoSize = true;
             this.lkQuenMatKhau.Font = new System.Drawing.Font("Times New Roman", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lkQuenMatKhau.LinkBehavior = System.Windows.Forms.LinkBehavior.HoverUnderline;
@@ -210,18 +223,6 @@
             this.label4.Size = new System.Drawing.Size(351, 26);
             this.label4.TabIndex = 6;
             this.label4.Text = "Trường đại học Giao Thông Vận Tải";
-            // 
-            // button1
-            // 
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(527, 449);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(31, 30);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "👁";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // fDangNhap
             // 

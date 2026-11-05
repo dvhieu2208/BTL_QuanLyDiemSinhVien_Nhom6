@@ -1,5 +1,5 @@
 
-USE QuanLyDiemSinhVienDaiHoc;
+USE QuanLyDiemSVDaiHoc;
 GO
 
 SET ANSI_NULLS ON;
