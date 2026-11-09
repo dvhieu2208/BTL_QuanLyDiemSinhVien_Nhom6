@@ -1,5 +1,5 @@
 
-USE QuanLyDiemSVDaiHoc;
+USE QuanLyDiemSVDaiHoc
 GO
 
 SET ANSI_NULLS ON;
@@ -96,10 +96,9 @@ GO
 CREATE TABLE TaiKhoan (
     TenDangNhap VARCHAR(50)  NOT NULL PRIMARY KEY,
     MatKhau     VARCHAR(255) NOT NULL,
-    MaSV        VARCHAR(10)  NULL, 
-    PhanQuyen   INT NOT NULL,
     TrangThai   BIT          NOT NULL DEFAULT 1,
-    CONSTRAINT FK_DangNhap_SinhVien FOREIGN KEY (MaSV) REFERENCES SinhVien(MaSV) ON DELETE CASCADE
+    CauHoiBaoMat varchar(200) null,
+    DapAnBaoMat varchar(255) null
 );
 GO
 
@@ -131,7 +130,6 @@ CREATE TABLE ThoiKhoaBieu (
 );
 GO
 
--- 3. Insert du lieu mau
 
 INSERT INTO Khoa (MaKhoa, TenKhoa, DienThoai, DiaChi, Website) VALUES
 ('CNTT', N'Công nghệ thông tin', '0241234567', N'Nhà A1', 'https://cntt.example.edu.vn'),
@@ -258,58 +256,8 @@ INSERT INTO SinhVien (MaSV, TenSV, MaKhoa, MaLop, NgaySinh, GioiTinh, MaQue, MaD
 ('SV050', N'Mai Quốc Anh', 'CNTT', 'CNTT05', '2005-06-08', N'Nam', 'HP', 'DT01', 'HTTT', 'CQ', 'SV');
 GO
 
-INSERT INTO TaiKhoan (TenDangNhap, MatKhau, PhanQuyen, MaSV, TrangThai) VALUES
-('admin', '123456', 1, NULL, 1),
-('sv001', '123456', 2, 'SV001', 1),
-('sv002', '123456', 2, 'SV002', 1),
-('sv003', '123456', 2, 'SV003', 1),
-('sv004', '123456', 2, 'SV004', 1),
-('sv005', '123456', 2, 'SV005', 1),
-('sv006', '123456', 2, 'SV006', 1),
-('sv007', '123456', 2, 'SV007', 1),
-('sv008', '123456', 2, 'SV008', 1),
-('sv009', '123456', 2, 'SV009', 1),
-('sv010', '123456', 2, 'SV010', 1),
-('sv011', '123456', 2, 'SV011', 1),
-('sv012', '123456', 2, 'SV012', 1),
-('sv013', '123456', 2, 'SV013', 1),
-('sv014', '123456', 2, 'SV014', 1),
-('sv015', '123456', 2, 'SV015', 1),
-('sv016', '123456', 2, 'SV016', 1),
-('sv017', '123456', 2, 'SV017', 1),
-('sv018', '123456', 2, 'SV018', 1),
-('sv019', '123456', 2, 'SV019', 1),
-('sv020', '123456', 2, 'SV020', 1),
-('sv021', '123456', 2, 'SV021', 1),
-('sv022', '123456', 2, 'SV022', 1),
-('sv023', '123456', 2, 'SV023', 1),
-('sv024', '123456', 2, 'SV024', 1),
-('sv025', '123456', 2, 'SV025', 1),
-('sv026', '123456', 2, 'SV026', 1),
-('sv027', '123456', 2, 'SV027', 1),
-('sv028', '123456', 2, 'SV028', 1),
-('sv029', '123456', 2, 'SV029', 1),
-('sv030', '123456', 2, 'SV030', 1),
-('sv031', '123456', 2, 'SV031', 1),
-('sv032', '123456', 2, 'SV032', 1),
-('sv033', '123456', 2, 'SV033', 1),
-('sv034', '123456', 2, 'SV034', 1),
-('sv035', '123456', 2, 'SV035', 1),
-('sv036', '123456', 2, 'SV036', 1),
-('sv037', '123456', 2, 'SV037', 1),
-('sv038', '123456', 2, 'SV038', 1),
-('sv039', '123456', 2, 'SV039', 1),
-('sv040', '123456', 2, 'SV040', 1),
-('sv041', '123456', 2, 'SV041', 1),
-('sv042', '123456', 2, 'SV042', 1),
-('sv043', '123456', 2, 'SV043', 1),
-('sv044', '123456', 2, 'SV044', 1),
-('sv045', '123456', 2, 'SV045', 1),
-('sv046', '123456', 2, 'SV046', 1),
-('sv047', '123456', 2, 'SV047', 1),
-('sv048', '123456', 2, 'SV048', 1),
-('sv049', '123456', 2, 'SV049', 1),
-('sv050', '123456', 2, 'SV050', 1);
+INSERT INTO TaiKhoan (TenDangNhap, MatKhau, TrangThai,CauHoiBaoMat,DapAnBaoMat) VALUES
+('admin', 'PBKDF2$100000$xlmzdtT0uqezhC9BG04wMw==$N0+e9SwUn9GHL//xp/twVaQluhPm7x6KT2uZUuVPZLg=',1, N'Tên viết tắt của trường bạn là gì?', 'PBKDF2$100000$+edF5gsLvflHZj/JQLdQhA==$B1ZLhb39foRQU7ojgMNw5MKdcYtNFflrieD/tGIHjO0=')
 GO
 
 INSERT INTO Diem (MaSV, MaLop, MaMon, HocKy, LanThi, Diem) VALUES
@@ -331,3 +279,4 @@ INSERT INTO ThoiKhoaBieu (MaLop, MaMon, HocKy, ThuHoc, CaHoc, MaPhong) VALUES
 ('CNTT01','TA1',1,7,1,'B201'),
 ('CNTT01','WEB',1,7,3,'Lab02');
 GO
+

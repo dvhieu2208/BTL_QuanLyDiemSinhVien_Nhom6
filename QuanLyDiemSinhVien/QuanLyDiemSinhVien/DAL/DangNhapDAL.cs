@@ -10,34 +10,30 @@ namespace QuanLyDiemSinhVien.DAL
 {
     internal class DangNhapDAL
     {
-        public bool KiemTraDangNhap(string taiKhoan, string matKhau)
+        public string LayMatKhau(string taiKhoan)
         {
-            bool isValid = false;
             using (SqlConnection conn = DBConnection.GetConnection())
             {
-                try
-                {
-                    conn.Open();
-                    string query = "SELECT COUNT(1) FROM TaiKhoan WHERE TenDangNhap = @TaiKhoan AND MatKhau = @MatKhau";
+                conn.Open();
 
-                    using (SqlCommand cmd = new SqlCommand(query, conn))
-                    {
-                        cmd.Parameters.AddWithValue("@TaiKhoan", taiKhoan);
-                        cmd.Parameters.AddWithValue("@MatKhau", matKhau);
+                string query = @"
+                    SELECT MatKhau
+                    FROM TaiKhoan
+                    WHERE TenDangNhap = @TaiKhoan";
 
-                        int count = Convert.ToInt32(cmd.ExecuteScalar());
-                        if (count > 0)
-                        {
-                            isValid = true;
-                        }
-                    }
-                }
-                catch (Exception ex)
+                using (SqlCommand cmd = new SqlCommand(query, conn))
                 {
-                    throw new Exception("Lỗi kết nối cơ sở dữ liệu: " + ex.Message);
+                    cmd.Parameters.Add("@TaiKhoan",
+                        System.Data.SqlDbType.NVarChar, 100).Value = taiKhoan;
+
+                    object result = cmd.ExecuteScalar();
+
+                    if (result == null || result == DBNull.Value)
+                        return null;
+
+                    return result.ToString();
                 }
             }
-            return isValid;
         }
     }
 }

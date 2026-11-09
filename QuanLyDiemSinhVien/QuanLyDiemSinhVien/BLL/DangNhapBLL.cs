@@ -13,12 +13,23 @@ namespace QuanLyDiemSinhVien.BLL
 
         public bool DangNhap(string taiKhoan, string matKhau)
         {
-            if (string.IsNullOrWhiteSpace(taiKhoan) || string.IsNullOrWhiteSpace(matKhau))
+            if (string.IsNullOrWhiteSpace(taiKhoan) ||
+                string.IsNullOrEmpty(matKhau))
             {
                 return false;
             }
 
-            return dal.KiemTraDangNhap(taiKhoan, matKhau);
+            // Lấy mật khẩu đã băm từ database
+            string storedHash = dal.LayMatKhau(taiKhoan);
+
+            if (string.IsNullOrEmpty(storedHash))
+                return false;
+
+            // Xác thực bằng PBKDF2
+            return MatKhauHash.VerifyPassword(
+                matKhau,
+                storedHash
+            );
         }
     }
 }

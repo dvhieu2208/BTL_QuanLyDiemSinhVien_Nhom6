@@ -45,6 +45,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -80,7 +81,7 @@
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1232, 71);
+            this.panel1.Size = new System.Drawing.Size(1343, 71);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -121,7 +122,7 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(12, 3);
+            this.button1.Location = new System.Drawing.Point(14, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(170, 42);
             this.button1.TabIndex = 0;
@@ -134,7 +135,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(12, 51);
+            this.button2.Location = new System.Drawing.Point(14, 51);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(170, 42);
             this.button2.TabIndex = 1;
@@ -147,7 +148,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(12, 99);
+            this.button3.Location = new System.Drawing.Point(14, 99);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(170, 42);
             this.button3.TabIndex = 2;
@@ -160,7 +161,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(12, 147);
+            this.button4.Location = new System.Drawing.Point(14, 147);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(170, 42);
             this.button4.TabIndex = 3;
@@ -173,7 +174,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(12, 195);
+            this.button5.Location = new System.Drawing.Point(14, 195);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(170, 42);
             this.button5.TabIndex = 4;
@@ -186,7 +187,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(15, 243);
+            this.button7.Location = new System.Drawing.Point(14, 295);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(170, 42);
             this.button7.TabIndex = 6;
@@ -199,7 +200,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(12, 291);
+            this.button8.Location = new System.Drawing.Point(14, 343);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(170, 42);
             this.button8.TabIndex = 7;
@@ -249,6 +250,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Controls.Add(this.btnXemBangDiem);
             this.panel2.Controls.Add(this.button20);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button8);
@@ -263,6 +265,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 658);
             this.panel2.TabIndex = 1;
+            // 
+            // btnXemBangDiem
+            // 
+            this.btnXemBangDiem.FlatAppearance.BorderSize = 0;
+            this.btnXemBangDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBangDiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXemBangDiem.Location = new System.Drawing.Point(14, 243);
+            this.btnXemBangDiem.Name = "btnXemBangDiem";
+            this.btnXemBangDiem.Size = new System.Drawing.Size(169, 46);
+            this.btnXemBangDiem.TabIndex = 16;
+            this.btnXemBangDiem.Text = "Xem bảng điểm";
+            this.btnXemBangDiem.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
@@ -282,7 +297,7 @@
             this.button10.BackColor = System.Drawing.Color.Green;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(886, 105);
+            this.button10.Location = new System.Drawing.Point(1037, 117);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(115, 43);
             this.button10.TabIndex = 2;
@@ -294,7 +309,7 @@
             this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(192)))));
             this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(1007, 105);
+            this.button11.Location = new System.Drawing.Point(1158, 117);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(87, 43);
             this.button11.TabIndex = 3;
@@ -306,7 +321,7 @@
             this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.button12.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button12.ForeColor = System.Drawing.Color.White;
-            this.button12.Location = new System.Drawing.Point(1100, 105);
+            this.button12.Location = new System.Drawing.Point(1251, 117);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(81, 43);
             this.button12.TabIndex = 4;
@@ -331,7 +346,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 480);
+            this.dataGridView1.Size = new System.Drawing.Size(1116, 480);
             this.dataGridView1.TabIndex = 7;
             // 
             // textBox1
@@ -440,7 +455,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 762);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
@@ -509,5 +524,6 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button20;
+        private System.Windows.Forms.Button btnXemBangDiem;
     }
 }

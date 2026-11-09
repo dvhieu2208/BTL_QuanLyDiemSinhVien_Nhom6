@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\MatKhauHash.cs" />
     <Compile Include="BLL\TrangChuBLL.cs" />
     <Compile Include="DAL\DangNhapDAL.cs" />
     <Compile Include="DAL\DBConnection.cs" />

@@ -34,6 +34,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.button20 = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -84,7 +85,7 @@
             this.panel1.Location = new System.Drawing.Point(1, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1232, 71);
+            this.panel1.Size = new System.Drawing.Size(1343, 71);
             this.panel1.TabIndex = 1;
             // 
             // pictureBox1
@@ -122,6 +123,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Controls.Add(this.btnXemBangDiem);
             this.panel2.Controls.Add(this.button20);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button8);
@@ -136,6 +138,19 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 658);
             this.panel2.TabIndex = 2;
+            // 
+            // btnXemBangDiem
+            // 
+            this.btnXemBangDiem.FlatAppearance.BorderSize = 0;
+            this.btnXemBangDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBangDiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXemBangDiem.Location = new System.Drawing.Point(12, 243);
+            this.btnXemBangDiem.Name = "btnXemBangDiem";
+            this.btnXemBangDiem.Size = new System.Drawing.Size(169, 46);
+            this.btnXemBangDiem.TabIndex = 16;
+            this.btnXemBangDiem.Text = "Xem bảng điểm";
+            this.btnXemBangDiem.UseVisualStyleBackColor = true;
             // 
             // button20
             // 
@@ -196,7 +211,7 @@
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.White;
-            this.button8.Location = new System.Drawing.Point(12, 291);
+            this.button8.Location = new System.Drawing.Point(11, 343);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(170, 42);
             this.button8.TabIndex = 7;
@@ -210,7 +225,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(12, 243);
+            this.button7.Location = new System.Drawing.Point(11, 295);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(170, 42);
             this.button7.TabIndex = 6;
@@ -404,7 +419,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(973, 432);
+            this.dataGridView1.Size = new System.Drawing.Size(1095, 432);
             this.dataGridView1.TabIndex = 14;
             // 
             // label9
@@ -484,7 +499,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 762);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);
@@ -561,5 +576,6 @@
         private System.Windows.Forms.Button button16;
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
+        private System.Windows.Forms.Button btnXemBangDiem;
     }
 }

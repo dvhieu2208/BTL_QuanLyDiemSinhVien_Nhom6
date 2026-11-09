@@ -26,18 +26,10 @@ namespace QuanLyDiemSinhVien
             try
             {
                 label9.Text = bll.GetTongSinhVien().ToString();
-                label10.Text = "Sinh viên hiện có";
-
                 label11.Text = bll.GetTongLop().ToString();
-                label13.Text = "Lớp hiện có";
-
                 label15.Text = bll.GetTongMonHoc().ToString();
-                label16.Text = "Môn học hiện có";
-
                 decimal tyLe = bll.GetTyLeDat();
-
                 label18.Text = tyLe.ToString("0.00") + "%";
-                label19.Text = "Tỷ lệ đạt theo môn";
             }
             catch (Exception ex)
             {
@@ -58,27 +50,49 @@ namespace QuanLyDiemSinhVien
 
                 chart1.Series.Clear();
                 chart1.Titles.Clear();
+                chart1.ChartAreas.Clear(); // Thêm dòng này để làm sạch khu vực biểu đồ cũ
 
-                chart1.Titles.Add("Thống kê kết quả học tập");
+                // Tạo ChartArea cho biểu đồ cột
+                ChartArea chartArea = new ChartArea("MainArea");
+                chartArea.AxisX.MajorGrid.Enabled = false; // Tắt lưới dọc cho gọn (tùy chọn)
+                chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
+                chartArea.AxisX.Interval = 1; // Hiển thị đầy đủ tất cả tên các cột trên trục X
+                chart1.ChartAreas.Add(chartArea);
 
-                Series series = new Series("Kết quả");
 
-                series.ChartType = SeriesChartType.Doughnut;
+                Series series = new Series("Xếp loại");
+
+                // Đổi kiểu biểu đồ từ Doughnut sang Column (Cột)
+                series.ChartType = SeriesChartType.Column;
                 series.IsValueShownAsLabel = true;
 
                 foreach (DataRow row in dt.Rows)
                 {
-                    string ten = row["KetQua"].ToString();
-
-                    int soLuong = Convert.ToInt32(
-                        row["SoLuong"]
-                    );
+                    string ten = row["KetQua"].ToString(); // Ví dụ: Xuất sắc, Giỏi, Khá, Trung bình, Yếu, Học lại
+                    int soLuong = Convert.ToInt32(row["SoLuong"]);
 
                     series.Points.AddXY(ten, soLuong);
                 }
 
+                // Tùy chọn màu sắc cho từng cột sinh động hơn (nếu cơ sở dữ liệu trả về đúng tên các mức)
+                foreach (DataPoint pt in series.Points)
+                {
+                    string label = pt.AxisLabel;
+                    if (label.Contains("Xuất sắc")) pt.Color = Color.FromArgb(46, 204, 113);      // Xanh lá
+                    else if (label.Contains("Giỏi")) pt.Color = Color.FromArgb(52, 152, 219);     // Xanh dương
+                    else if (label.Contains("Khá")) pt.Color = Color.FromArgb(241, 196, 15);      // Vàng
+                    else if (label.Contains("Trung bình")) pt.Color = Color.FromArgb(230, 126, 34); // Cam
+                    else if (label.Contains("Yếu")) pt.Color = Color.FromArgb(231, 76, 60);       // Đỏ
+                    else if (label.Contains("Học lại")) pt.Color = Color.FromArgb(149, 165, 166); // Xám
+                }
+
                 chart1.Series.Add(series);
-                chart1.Legends[0].Enabled = true;
+
+                // Kiểm tra và bật Legend nếu tồn tại
+                if (chart1.Legends.Count > 0)
+                {
+                    chart1.Legends[0].Enabled = true;
+                }
             }
             catch (Exception ex)
             {

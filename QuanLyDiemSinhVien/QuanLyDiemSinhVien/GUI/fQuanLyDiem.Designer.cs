@@ -61,6 +61,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
+            this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -210,6 +211,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
+            this.panel2.Controls.Add(this.btnXemBangDiem);
             this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.button11);
             this.panel2.Controls.Add(this.button10);
@@ -290,7 +292,7 @@
             this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button10.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Location = new System.Drawing.Point(3, 305);
+            this.button10.Location = new System.Drawing.Point(3, 358);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(185, 48);
             this.button10.TabIndex = 0;
@@ -304,7 +306,7 @@
             this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button9.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Location = new System.Drawing.Point(6, 251);
+            this.button9.Location = new System.Drawing.Point(3, 307);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(185, 48);
             this.button9.TabIndex = 0;
@@ -318,7 +320,7 @@
             this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button7.ForeColor = System.Drawing.Color.White;
-            this.button7.Location = new System.Drawing.Point(3, 197);
+            this.button7.Location = new System.Drawing.Point(3, 207);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(185, 48);
             this.button7.TabIndex = 0;
@@ -332,7 +334,7 @@
             this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button6.ForeColor = System.Drawing.Color.White;
-            this.button6.Location = new System.Drawing.Point(3, 148);
+            this.button6.Location = new System.Drawing.Point(3, 156);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(185, 48);
             this.button6.TabIndex = 0;
@@ -346,7 +348,7 @@
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.White;
-            this.button5.Location = new System.Drawing.Point(3, 99);
+            this.button5.Location = new System.Drawing.Point(3, 105);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(185, 48);
             this.button5.TabIndex = 0;
@@ -360,7 +362,7 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.White;
-            this.button4.Location = new System.Drawing.Point(3, 50);
+            this.button4.Location = new System.Drawing.Point(3, 54);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(185, 48);
             this.button4.TabIndex = 0;
@@ -375,7 +377,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(3, 1);
+            this.button3.Location = new System.Drawing.Point(3, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(185, 48);
             this.button3.TabIndex = 0;
@@ -445,6 +447,20 @@
             this.button18.TabIndex = 10;
             this.button18.Text = ">";
             this.button18.UseVisualStyleBackColor = true;
+            // 
+            // btnXemBangDiem
+            // 
+            this.btnXemBangDiem.FlatAppearance.BorderSize = 0;
+            this.btnXemBangDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBangDiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXemBangDiem.Location = new System.Drawing.Point(3, 255);
+            this.btnXemBangDiem.Name = "btnXemBangDiem";
+            this.btnXemBangDiem.Size = new System.Drawing.Size(185, 46);
+            this.btnXemBangDiem.TabIndex = 16;
+            this.btnXemBangDiem.Text = "Xem bảng điểm";
+            this.btnXemBangDiem.UseVisualStyleBackColor = true;
+            this.btnXemBangDiem.Click += new System.EventHandler(this.btnXemBangDiem_Click);
             // 
             // fQuanLyDiem
             // 
@@ -520,5 +536,6 @@
         private System.Windows.Forms.Button button17;
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Button btnXemBangDiem;
     }
 }

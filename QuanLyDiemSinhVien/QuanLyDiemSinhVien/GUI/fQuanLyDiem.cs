@@ -36,5 +36,10 @@ namespace QuanLyDiemSinhVien
         {
 
         }
+
+        private void btnXemBangDiem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
