@@ -42,6 +42,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.panel3 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -61,7 +62,6 @@
             this.button16 = new System.Windows.Forms.Button();
             this.button17 = new System.Windows.Forms.Button();
             this.button18 = new System.Windows.Forms.Button();
-            this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -80,7 +80,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1232, 71);
+            this.panel1.Size = new System.Drawing.Size(1344, 71);
             this.panel1.TabIndex = 0;
             // 
             // pictureBox1
@@ -121,12 +121,12 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Times New Roman", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.Font = new System.Drawing.Font("Times New Roman", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.Navy;
             this.label13.Location = new System.Drawing.Point(207, 85);
             this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(278, 32);
+            this.label13.Size = new System.Drawing.Size(293, 35);
             this.label13.TabIndex = 2;
             this.label13.Text = "Nhập và quản lý điểm";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -178,7 +178,7 @@
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(978, 400);
+            this.dataGridView1.Size = new System.Drawing.Size(1107, 400);
             this.dataGridView1.TabIndex = 7;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -187,10 +187,10 @@
             this.button1.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.button1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(901, 175);
+            this.button1.Location = new System.Drawing.Point(1011, 176);
             this.button1.Margin = new System.Windows.Forms.Padding(4);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(113, 53);
+            this.button1.Size = new System.Drawing.Size(133, 53);
             this.button1.TabIndex = 8;
             this.button1.Text = "Tìm kiếm";
             this.button1.UseVisualStyleBackColor = false;
@@ -200,10 +200,10 @@
             this.button2.BackColor = System.Drawing.Color.SpringGreen;
             this.button2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Black;
-            this.button2.Location = new System.Drawing.Point(1072, 175);
+            this.button2.Location = new System.Drawing.Point(1182, 176);
             this.button2.Margin = new System.Windows.Forms.Padding(4);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(116, 53);
+            this.button2.Size = new System.Drawing.Size(136, 53);
             this.button2.TabIndex = 9;
             this.button2.Text = "In";
             this.button2.UseVisualStyleBackColor = false;
@@ -225,15 +225,29 @@
             this.panel2.Location = new System.Drawing.Point(0, 71);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(191, 658);
+            this.panel2.Size = new System.Drawing.Size(191, 691);
             this.panel2.TabIndex = 1;
+            // 
+            // btnXemBangDiem
+            // 
+            this.btnXemBangDiem.FlatAppearance.BorderSize = 0;
+            this.btnXemBangDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnXemBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnXemBangDiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnXemBangDiem.Location = new System.Drawing.Point(3, 255);
+            this.btnXemBangDiem.Name = "btnXemBangDiem";
+            this.btnXemBangDiem.Size = new System.Drawing.Size(185, 46);
+            this.btnXemBangDiem.TabIndex = 16;
+            this.btnXemBangDiem.Text = "Xem bảng điểm";
+            this.btnXemBangDiem.UseVisualStyleBackColor = true;
+            this.btnXemBangDiem.Click += new System.EventHandler(this.btnXemBangDiem_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.pictureBox2);
             this.panel3.Controls.Add(this.label4);
             this.panel3.Controls.Add(this.label3);
-            this.panel3.Location = new System.Drawing.Point(12, 516);
+            this.panel3.Location = new System.Drawing.Point(12, 546);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(170, 88);
             this.panel3.TabIndex = 1;
@@ -278,7 +292,7 @@
             this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button11.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button11.ForeColor = System.Drawing.Color.White;
-            this.button11.Location = new System.Drawing.Point(3, 610);
+            this.button11.Location = new System.Drawing.Point(3, 640);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(185, 48);
             this.button11.TabIndex = 0;
@@ -386,7 +400,7 @@
             // 
             // button12
             // 
-            this.button12.Location = new System.Drawing.Point(873, 668);
+            this.button12.Location = new System.Drawing.Point(1002, 670);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(40, 40);
             this.button12.TabIndex = 10;
@@ -395,7 +409,7 @@
             // 
             // button13
             // 
-            this.button13.Location = new System.Drawing.Point(919, 668);
+            this.button13.Location = new System.Drawing.Point(1048, 670);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(40, 40);
             this.button13.TabIndex = 10;
@@ -404,7 +418,7 @@
             // 
             // button14
             // 
-            this.button14.Location = new System.Drawing.Point(965, 668);
+            this.button14.Location = new System.Drawing.Point(1094, 670);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(40, 40);
             this.button14.TabIndex = 10;
@@ -413,7 +427,7 @@
             // 
             // button15
             // 
-            this.button15.Location = new System.Drawing.Point(1011, 668);
+            this.button15.Location = new System.Drawing.Point(1140, 670);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(40, 40);
             this.button15.TabIndex = 10;
@@ -422,7 +436,7 @@
             // 
             // button16
             // 
-            this.button16.Location = new System.Drawing.Point(1057, 668);
+            this.button16.Location = new System.Drawing.Point(1186, 670);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(40, 40);
             this.button16.TabIndex = 10;
@@ -431,7 +445,7 @@
             // 
             // button17
             // 
-            this.button17.Location = new System.Drawing.Point(1103, 668);
+            this.button17.Location = new System.Drawing.Point(1232, 670);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(40, 40);
             this.button17.TabIndex = 10;
@@ -441,32 +455,18 @@
             // button18
             // 
             this.button18.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button18.Location = new System.Drawing.Point(1149, 668);
+            this.button18.Location = new System.Drawing.Point(1278, 670);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(40, 40);
             this.button18.TabIndex = 10;
             this.button18.Text = ">";
             this.button18.UseVisualStyleBackColor = true;
             // 
-            // btnXemBangDiem
-            // 
-            this.btnXemBangDiem.FlatAppearance.BorderSize = 0;
-            this.btnXemBangDiem.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnXemBangDiem.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnXemBangDiem.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btnXemBangDiem.Location = new System.Drawing.Point(3, 255);
-            this.btnXemBangDiem.Name = "btnXemBangDiem";
-            this.btnXemBangDiem.Size = new System.Drawing.Size(185, 46);
-            this.btnXemBangDiem.TabIndex = 16;
-            this.btnXemBangDiem.Text = "Xem bảng điểm";
-            this.btnXemBangDiem.UseVisualStyleBackColor = true;
-            this.btnXemBangDiem.Click += new System.EventHandler(this.btnXemBangDiem_Click);
-            // 
             // fQuanLyDiem
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1232, 729);
+            this.ClientSize = new System.Drawing.Size(1344, 762);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.button17);
             this.Controls.Add(this.button16);

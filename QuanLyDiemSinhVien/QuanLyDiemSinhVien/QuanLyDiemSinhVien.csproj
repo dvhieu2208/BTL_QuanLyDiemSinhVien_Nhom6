@@ -40,6 +40,7 @@
     <Reference Include="System">
       <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
     </Reference>
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.DirectoryServices" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
@@ -61,6 +62,12 @@
     <Compile Include="DAL\DBConnection.cs" />
     <Compile Include="DAL\SinhVienDAL.cs" />
     <Compile Include="DAL\TrangChuDAL.cs" />
+    <Compile Include="DTO\Diem.cs" />
+    <Compile Include="DTO\Khoa.cs" />
+    <Compile Include="DTO\Lop.cs" />
+    <Compile Include="DTO\MonHoc.cs" />
+    <Compile Include="DTO\Nguoi.cs" />
+    <Compile Include="DTO\SinhVien.cs" />
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +122,12 @@
     <Compile Include="GUI\fXemBangDiem.Designer.cs">
       <DependentUpon>fXemBangDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\IKiemTraHopLe.cs" />
+    <Compile Include="Interfaces\IRepository.cs" />
+    <Compile Include="Interfaces\IThongKe.cs" />
+    <Compile Include="Interfaces\ITimKiem.cs" />
+    <Compile Include="Interfaces\IXacThuc.cs" />
+    <Compile Include="Interfaces\IXepLoai.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="GUI\fDangNhap.resx">
