@@ -117,5 +117,10 @@ namespace QuanLyDiemSinhVien
 
         // ---- Hàm sự kiện do Designer tạo sẵn ----
         private void button8_Click(object sender, EventArgs e) { }
+
+        private void btnMonHoc_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

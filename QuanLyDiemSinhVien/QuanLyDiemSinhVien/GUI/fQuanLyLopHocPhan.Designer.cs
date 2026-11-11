@@ -245,6 +245,7 @@
             this.btnMonHoc.TabIndex = 2;
             this.btnMonHoc.Text = "Môn học";
             this.btnMonHoc.UseVisualStyleBackColor = true;
+            this.btnMonHoc.Click += new System.EventHandler(this.btnMonHoc_Click);
             // 
             // btnSinhVien
             // 
@@ -384,6 +385,7 @@
             // 
             // textBox1
             // 
+            this.textBox1.ForeColor = System.Drawing.SystemColors.InfoText;
             this.textBox1.Location = new System.Drawing.Point(901, 170);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";

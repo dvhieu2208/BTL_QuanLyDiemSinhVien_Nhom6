@@ -363,7 +363,7 @@
             this.colSiSo,
             this.colNam,
             this.colNu});
-            this.dgvDanhSach.Location = new System.Drawing.Point(761, 240);
+            this.dgvDanhSach.Location = new System.Drawing.Point(761, 125);
             this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDanhSach.MultiSelect = false;
             this.dgvDanhSach.Name = "dgvDanhSach";
@@ -371,7 +371,7 @@
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
             this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDanhSach.Size = new System.Drawing.Size(570, 505);
+            this.dgvDanhSach.Size = new System.Drawing.Size(570, 620);
             this.dgvDanhSach.TabIndex = 13;
             // 
             // colKhoa
@@ -423,7 +423,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(761, 210);
+            this.label8.Location = new System.Drawing.Point(761, 90);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(376, 26);

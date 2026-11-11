@@ -53,8 +53,6 @@
             this.colDVHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colSoLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.cboDVHT = new System.Windows.Forms.ComboBox();
-            this.label6 = new System.Windows.Forms.Label();
             this.button13 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -62,6 +60,8 @@
             this.btn4 = new System.Windows.Forms.Button();
             this.btn5 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
+            this.cboDVHT = new System.Windows.Forms.ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -361,27 +361,6 @@
             this.textBox1.Size = new System.Drawing.Size(389, 34);
             this.textBox1.TabIndex = 8;
             // 
-            // cboDVHT
-            // 
-            this.cboDVHT.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.cboDVHT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboDVHT.FormattingEnabled = true;
-            this.cboDVHT.ItemHeight = 28;
-            this.cboDVHT.Location = new System.Drawing.Point(646, 126);
-            this.cboDVHT.Name = "cboDVHT";
-            this.cboDVHT.Size = new System.Drawing.Size(216, 34);
-            this.cboDVHT.TabIndex = 9;
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(643, 98);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(71, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "Số ĐVHT";
-            // 
             // button13
             // 
             this.button13.Location = new System.Drawing.Point(1015, 710);
@@ -445,11 +424,31 @@
             this.button19.Text = ">";
             this.button19.UseVisualStyleBackColor = true;
             // 
+            // cboDVHT
+            // 
+            this.cboDVHT.FormattingEnabled = true;
+            this.cboDVHT.Location = new System.Drawing.Point(774, 129);
+            this.cboDVHT.Name = "cboDVHT";
+            this.cboDVHT.Size = new System.Drawing.Size(121, 24);
+            this.cboDVHT.TabIndex = 19;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(664, 131);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(89, 22);
+            this.label3.TabIndex = 20;
+            this.label3.Text = "Số ĐVHT";
+            // 
             // fQuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 762);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.cboDVHT);
             this.Controls.Add(this.button19);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
@@ -457,8 +456,6 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
             this.Controls.Add(this.button13);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.cboDVHT);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.label5);
@@ -498,8 +495,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.ComboBox cboDVHT;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btn1;
         private System.Windows.Forms.Button btn2;
@@ -515,5 +510,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colTenMon;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDVHT;
         private System.Windows.Forms.DataGridViewTextBoxColumn colSoLop;
+        private System.Windows.Forms.ComboBox cboDVHT;
+        private System.Windows.Forms.Label label3;
     }
 }

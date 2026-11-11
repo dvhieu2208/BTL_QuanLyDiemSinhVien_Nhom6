@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSinhVien));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
@@ -54,15 +56,15 @@
             this.cboLop = new System.Windows.Forms.ComboBox();
             this.cboTinhTrang = new System.Windows.Forms.ComboBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.colChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colQue = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colChuyenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChuyenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button13 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -71,7 +73,6 @@
             this.btn5 = new System.Windows.Forms.Button();
             this.button19 = new System.Windows.Forms.Button();
             this.btnTimKiem = new System.Windows.Forms.Button();
-            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -142,6 +143,20 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(191, 691);
             this.panel2.TabIndex = 1;
+            // 
+            // btnQuanLyLop
+            // 
+            this.btnQuanLyLop.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnQuanLyLop.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyLop.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyLop.Location = new System.Drawing.Point(3, 349);
+            this.btnQuanLyLop.Name = "btnQuanLyLop";
+            this.btnQuanLyLop.Size = new System.Drawing.Size(185, 44);
+            this.btnQuanLyLop.TabIndex = 17;
+            this.btnQuanLyLop.Text = "Quản lý lớp";
+            this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
             // btnXemBangDiem
             // 
@@ -261,6 +276,7 @@
             // 
             // txtTimKiem
             // 
+            this.txtTimKiem.ForeColor = System.Drawing.SystemColors.InfoText;
             this.txtTimKiem.Location = new System.Drawing.Point(203, 122);
             this.txtTimKiem.Multiline = true;
             this.txtTimKiem.Name = "txtTimKiem";
@@ -326,40 +342,43 @@
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(548, 170);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(90, 22);
+            this.label8.Size = new System.Drawing.Size(118, 22);
             this.label8.TabIndex = 5;
             this.label8.Text = "Chuyên ngành";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cboKhoa
             // 
+            this.cboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhoa.FormattingEnabled = true;
             this.cboKhoa.Location = new System.Drawing.Point(216, 210);
-            this.cboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(139, 30);
             this.cboKhoa.TabIndex = 6;
             // 
             // cboLop
             // 
+            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.FormattingEnabled = true;
             this.cboLop.Location = new System.Drawing.Point(384, 210);
-            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(139, 30);
             this.cboLop.TabIndex = 6;
             // 
             // cboTinhTrang
             // 
+            this.cboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTinhTrang.FormattingEnabled = true;
             this.cboTinhTrang.Location = new System.Drawing.Point(552, 210);
-            this.cboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTinhTrang.Name = "cboTinhTrang";
             this.cboTinhTrang.Size = new System.Drawing.Size(139, 30);
             this.cboTinhTrang.TabIndex = 6;
             // 
             // dgvDanhSach
             // 
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colMaSV,
@@ -372,18 +391,98 @@
             this.colKhoa,
             this.colChucVu});
             this.dgvDanhSach.Location = new System.Drawing.Point(216, 246);
-            this.dgvDanhSach.AllowUserToAddRows = false;
-            this.dgvDanhSach.AllowUserToDeleteRows = false;
-            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.MultiSelect = false;
-            this.dgvDanhSach.ReadOnly = true;
-            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(1099, 448);
             this.dgvDanhSach.TabIndex = 7;
             this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // colMaSV
+            // 
+            this.colMaSV.DataPropertyName = "MaSV";
+            this.colMaSV.FillWeight = 70F;
+            this.colMaSV.HeaderText = "Mã SV";
+            this.colMaSV.MinimumWidth = 6;
+            this.colMaSV.Name = "colMaSV";
+            this.colMaSV.ReadOnly = true;
+            // 
+            // colTenSV
+            // 
+            this.colTenSV.DataPropertyName = "TenSV";
+            this.colTenSV.FillWeight = 150F;
+            this.colTenSV.HeaderText = "Họ và tên";
+            this.colTenSV.MinimumWidth = 6;
+            this.colTenSV.Name = "colTenSV";
+            this.colTenSV.ReadOnly = true;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle2;
+            this.colNgaySinh.FillWeight = 80F;
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.MinimumWidth = 6;
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.ReadOnly = true;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.FillWeight = 60F;
+            this.colGioiTinh.HeaderText = "Giới tính";
+            this.colGioiTinh.MinimumWidth = 6;
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.ReadOnly = true;
+            // 
+            // colLop
+            // 
+            this.colLop.DataPropertyName = "MaLop";
+            this.colLop.FillWeight = 70F;
+            this.colLop.HeaderText = "Lớp";
+            this.colLop.MinimumWidth = 6;
+            this.colLop.Name = "colLop";
+            this.colLop.ReadOnly = true;
+            // 
+            // colChuyenNganh
+            // 
+            this.colChuyenNganh.DataPropertyName = "TenChuyenNganh";
+            this.colChuyenNganh.FillWeight = 130F;
+            this.colChuyenNganh.HeaderText = "Chuyên ngành";
+            this.colChuyenNganh.MinimumWidth = 6;
+            this.colChuyenNganh.Name = "colChuyenNganh";
+            this.colChuyenNganh.ReadOnly = true;
+            // 
+            // colQue
+            // 
+            this.colQue.DataPropertyName = "TenQue";
+            this.colQue.FillWeight = 80F;
+            this.colQue.HeaderText = "Quê";
+            this.colQue.MinimumWidth = 6;
+            this.colQue.Name = "colQue";
+            this.colQue.ReadOnly = true;
+            // 
+            // colKhoa
+            // 
+            this.colKhoa.DataPropertyName = "TenKhoa";
+            this.colKhoa.FillWeight = 120F;
+            this.colKhoa.HeaderText = "Khoa";
+            this.colKhoa.MinimumWidth = 6;
+            this.colKhoa.Name = "colKhoa";
+            this.colKhoa.ReadOnly = true;
+            // 
+            // colChucVu
+            // 
+            this.colChucVu.DataPropertyName = "TenChucVu";
+            this.colChucVu.FillWeight = 80F;
+            this.colChucVu.HeaderText = "Chức vụ";
+            this.colChucVu.MinimumWidth = 6;
+            this.colChucVu.Name = "colChucVu";
+            this.colChucVu.ReadOnly = true;
             // 
             // button13
             // 
@@ -464,102 +563,6 @@
             this.btnTimKiem.TabIndex = 9;
             this.btnTimKiem.Text = "Tìm kiếm";
             this.btnTimKiem.UseVisualStyleBackColor = true;
-            // 
-            // btnQuanLyLop
-            // 
-            this.btnQuanLyLop.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnQuanLyLop.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyLop.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyLop.Location = new System.Drawing.Point(3, 349);
-            this.btnQuanLyLop.Name = "btnQuanLyLop";
-            this.btnQuanLyLop.Size = new System.Drawing.Size(185, 44);
-            this.btnQuanLyLop.TabIndex = 17;
-            this.btnQuanLyLop.Text = "Quản lý lớp";
-            this.btnQuanLyLop.UseVisualStyleBackColor = false;
-            // 
-            // colMaSV
-            // 
-            this.colMaSV.DataPropertyName = "MaSV";
-            this.colMaSV.HeaderText = "Mã SV";
-            this.colMaSV.MinimumWidth = 6;
-            this.colMaSV.Name = "colMaSV";
-            this.colMaSV.ReadOnly = true;
-            this.colMaSV.FillWeight = 70F;
-            // 
-            // colTenSV
-            // 
-            this.colTenSV.DataPropertyName = "TenSV";
-            this.colTenSV.HeaderText = "Họ và tên";
-            this.colTenSV.MinimumWidth = 6;
-            this.colTenSV.Name = "colTenSV";
-            this.colTenSV.ReadOnly = true;
-            this.colTenSV.FillWeight = 150F;
-            // 
-            // colNgaySinh
-            // 
-            this.colNgaySinh.DataPropertyName = "NgaySinh";
-            this.colNgaySinh.HeaderText = "Ngày sinh";
-            this.colNgaySinh.MinimumWidth = 6;
-            this.colNgaySinh.DefaultCellStyle.Format = "dd/MM/yyyy";
-            this.colNgaySinh.Name = "colNgaySinh";
-            this.colNgaySinh.ReadOnly = true;
-            this.colNgaySinh.FillWeight = 80F;
-            // 
-            // colGioiTinh
-            // 
-            this.colGioiTinh.DataPropertyName = "GioiTinh";
-            this.colGioiTinh.HeaderText = "Giới tính";
-            this.colGioiTinh.MinimumWidth = 6;
-            this.colGioiTinh.Name = "colGioiTinh";
-            this.colGioiTinh.ReadOnly = true;
-            this.colGioiTinh.FillWeight = 60F;
-            // 
-            // colLop
-            // 
-            this.colLop.DataPropertyName = "MaLop";
-            this.colLop.HeaderText = "Lớp";
-            this.colLop.MinimumWidth = 6;
-            this.colLop.Name = "colLop";
-            this.colLop.ReadOnly = true;
-            this.colLop.FillWeight = 70F;
-            // 
-            // colChuyenNganh
-            // 
-            this.colChuyenNganh.DataPropertyName = "TenChuyenNganh";
-            this.colChuyenNganh.HeaderText = "Chuyên ngành";
-            this.colChuyenNganh.MinimumWidth = 6;
-            this.colChuyenNganh.Name = "colChuyenNganh";
-            this.colChuyenNganh.ReadOnly = true;
-            this.colChuyenNganh.FillWeight = 130F;
-            // 
-            // colQue
-            // 
-            this.colQue.DataPropertyName = "TenQue";
-            this.colQue.HeaderText = "Quê";
-            this.colQue.MinimumWidth = 6;
-            this.colQue.Name = "colQue";
-            this.colQue.ReadOnly = true;
-            this.colQue.FillWeight = 80F;
-            // 
-            // colKhoa
-            // 
-            this.colKhoa.DataPropertyName = "TenKhoa";
-            this.colKhoa.HeaderText = "Khoa";
-            this.colKhoa.MinimumWidth = 6;
-            this.colKhoa.Name = "colKhoa";
-            this.colKhoa.ReadOnly = true;
-            this.colKhoa.FillWeight = 120F;
-            // 
-            // colChucVu
-            // 
-            this.colChucVu.DataPropertyName = "TenChucVu";
-            this.colChucVu.HeaderText = "Chức vụ";
-            this.colChucVu.MinimumWidth = 6;
-            this.colChucVu.Name = "colChucVu";
-            this.colChucVu.ReadOnly = true;
-            this.colChucVu.FillWeight = 80F;
             // 
             // fSinhVien
             // 
