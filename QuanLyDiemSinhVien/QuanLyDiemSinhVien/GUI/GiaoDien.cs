@@ -5,13 +5,10 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>
-    /// Các hàm tiện ích dùng chung: thông báo, đổ dữ liệu vào ComboBox, đọc giá trị đang chọn.
-    /// (Không tạo hay thay đổi giao diện - giao diện nằm hết trong các file .Designer.cs)
-    /// </summary>
+
     internal static class GiaoDien
     {
-        // ---------------- Thông báo ----------------
+
         public static void ThongBao(string noiDung)
         {
             MessageBox.Show(noiDung, "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -33,8 +30,6 @@ namespace QuanLyDiemSinhVien.GUI
             return MessageBox.Show(noiDung, "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes;
         }
 
-        // ---------------- ComboBox ----------------
-        /// <summary>Đổ dữ liệu vào ComboBox; nếu coTatCa thì thêm dòng "-- Tất cả --" (giá trị rỗng) ở đầu.</summary>
         public static void GanCombo(ComboBox cb, DataTable nguon, string cotGiaTri, string cotHienThi,
                                     bool coTatCa, string chuTatCa = "-- Tất cả --")
         {
@@ -53,7 +48,6 @@ namespace QuanLyDiemSinhVien.GUI
             if (dt.Rows.Count > 0) cb.SelectedIndex = 0;
         }
 
-        /// <summary>Đổ danh sách số (VD: học kỳ, lần thi) vào ComboBox.</summary>
         public static void GanComboSo(ComboBox cb, IEnumerable<int> cacSo, string tienTo, bool coTatCa)
         {
             DataTable dt = new DataTable();
@@ -63,7 +57,6 @@ namespace QuanLyDiemSinhVien.GUI
             GanCombo(cb, dt, "GiaTri", "HienThi", coTatCa);
         }
 
-        /// <summary>Giá trị đang chọn; null nếu chưa chọn hoặc chọn "Tất cả".</summary>
         public static string GiaTri(ComboBox cb)
         {
             if (cb.SelectedIndex < 0 || cb.SelectedValue == null) return null;
@@ -84,8 +77,6 @@ namespace QuanLyDiemSinhVien.GUI
             cb.SelectedValue = giaTri.ToString();
         }
 
-        // ---------------- DataGridView ----------------
-        /// <summary>Lấy giá trị theo tên cột dữ liệu (DataPropertyName) của dòng đang chọn.</summary>
         public static string GiaTriDongChon(DataGridView dgv, string cotDuLieu)
         {
             if (dgv.CurrentRow == null) return null;

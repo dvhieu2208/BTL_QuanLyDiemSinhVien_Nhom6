@@ -6,12 +6,7 @@ using QuanLyDiemSinhVien.GUI;
 
 namespace QuanLyDiemSinhVien
 {
-    /// <summary>
-    /// Quản lý sinh viên.
-    /// - Yêu cầu 2/4: chọn Khoa -> cboLop, cboTinhTrang (chuyên ngành) chỉ hiện của khoa đó.
-    /// - Yêu cầu 3: chọn Lớp -> chỉ hiện sinh viên lớp đó.
-    /// - Yêu cầu 6: tìm theo khoa, chuyên ngành; ô txtTimKiem tìm theo mã, tên hoặc QUÊ.
-    /// </summary>
+
     public partial class fSinhVien : Form
     {
         private readonly SinhVienBLL bll = new SinhVienBLL();

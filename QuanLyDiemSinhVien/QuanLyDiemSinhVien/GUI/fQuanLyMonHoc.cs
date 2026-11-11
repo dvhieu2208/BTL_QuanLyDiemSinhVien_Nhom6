@@ -5,7 +5,7 @@ using QuanLyDiemSinhVien.GUI;
 
 namespace QuanLyDiemSinhVien
 {
-    /// <summary>Quản lý môn học: thêm, sửa, xóa, tìm kiếm (textBox1 = mã/tên môn, cboDVHT = số ĐVHT).</summary>
+
     public partial class fQuanLyMonHoc : Form
     {
         private readonly MonHocBLL bll = new MonHocBLL();
@@ -72,7 +72,6 @@ namespace QuanLyDiemSinhVien
             else GiaoDien.Loi(loi);
         }
 
-        // ---- Các hàm sự kiện do Designer tạo sẵn ----
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e) { }
         private void label7_Click(object sender, EventArgs e) { }
     }

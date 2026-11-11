@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.btnXemBangDiem = new System.Windows.Forms.Button();
             this.btnDangXuat = new System.Windows.Forms.Button();
             this.btnBaoCao = new System.Windows.Forms.Button();
@@ -47,24 +48,18 @@
             this.btnMonHoc = new System.Windows.Forms.Button();
             this.btnSinhVien = new System.Windows.Forms.Button();
             this.btnTrangChu = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.btnThongKe = new System.Windows.Forms.Button();
             this.label6 = new System.Windows.Forms.Label();
             this.cboLoaiBaoCao = new System.Windows.Forms.ComboBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.colNu = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNu = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
-            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
@@ -165,6 +160,20 @@
             this.panel2.Size = new System.Drawing.Size(191, 691);
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // btnQuanLyLop
+            // 
+            this.btnQuanLyLop.BackColor = System.Drawing.Color.RoyalBlue;
+            this.btnQuanLyLop.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyLop.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyLop.Location = new System.Drawing.Point(3, 344);
+            this.btnQuanLyLop.Name = "btnQuanLyLop";
+            this.btnQuanLyLop.Size = new System.Drawing.Size(185, 44);
+            this.btnQuanLyLop.TabIndex = 17;
+            this.btnQuanLyLop.Text = "Quản lý lớp";
+            this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
             // btnXemBangDiem
             // 
@@ -278,68 +287,11 @@
             this.btnTrangChu.Text = "Trang chủ";
             this.btnTrangChu.UseVisualStyleBackColor = true;
             // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(11, 38);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(89, 26);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "Từ ngày";
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(16, 73);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(177, 30);
-            this.dateTimePicker1.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(211, 38);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(102, 26);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "Đến ngày";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker2.Location = new System.Drawing.Point(216, 73);
-            this.dateTimePicker2.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(177, 30);
-            this.dateTimePicker2.TabIndex = 5;
-            // 
-            // btnThongKe
-            // 
-            this.btnThongKe.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnThongKe.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnThongKe.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnThongKe.ForeColor = System.Drawing.Color.White;
-            this.btnThongKe.Location = new System.Drawing.Point(434, 35);
-            this.btnThongKe.Margin = new System.Windows.Forms.Padding(4);
-            this.btnThongKe.Name = "btnThongKe";
-            this.btnThongKe.Size = new System.Drawing.Size(118, 42);
-            this.btnThongKe.TabIndex = 6;
-            this.btnThongKe.Text = "Thống kê";
-            this.btnThongKe.UseVisualStyleBackColor = false;
-            this.btnThongKe.Click += new System.EventHandler(this.button10_Click);
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(795, 117);
+            this.label6.Location = new System.Drawing.Point(31, 51);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(131, 26);
@@ -349,11 +301,11 @@
             // cboLoaiBaoCao
             // 
             this.cboLoaiBaoCao.BackColor = System.Drawing.Color.White;
+            this.cboLoaiBaoCao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiBaoCao.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboLoaiBaoCao.FormattingEnabled = true;
-            this.cboLoaiBaoCao.Location = new System.Drawing.Point(971, 114);
+            this.cboLoaiBaoCao.Location = new System.Drawing.Point(207, 48);
             this.cboLoaiBaoCao.Margin = new System.Windows.Forms.Padding(4);
-            this.cboLoaiBaoCao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiBaoCao.Name = "cboLoaiBaoCao";
             this.cboLoaiBaoCao.Size = new System.Drawing.Size(294, 34);
             this.cboLoaiBaoCao.TabIndex = 11;
@@ -362,11 +314,8 @@
             // 
             this.panel3.Controls.Add(this.label7);
             this.panel3.Controls.Add(this.chart1);
-            this.panel3.Controls.Add(this.label4);
-            this.panel3.Controls.Add(this.label3);
-            this.panel3.Controls.Add(this.dateTimePicker1);
-            this.panel3.Controls.Add(this.btnThongKe);
-            this.panel3.Controls.Add(this.dateTimePicker2);
+            this.panel3.Controls.Add(this.cboLoaiBaoCao);
+            this.panel3.Controls.Add(this.label6);
             this.panel3.Location = new System.Drawing.Point(193, 74);
             this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
@@ -404,6 +353,9 @@
             // 
             // dgvDanhSach
             // 
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colKhoa,
@@ -413,17 +365,59 @@
             this.colNu});
             this.dgvDanhSach.Location = new System.Drawing.Point(761, 240);
             this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvDanhSach.AllowUserToAddRows = false;
-            this.dgvDanhSach.AllowUserToDeleteRows = false;
-            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.MultiSelect = false;
-            this.dgvDanhSach.ReadOnly = true;
-            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(570, 505);
             this.dgvDanhSach.TabIndex = 13;
+            // 
+            // colKhoa
+            // 
+            this.colKhoa.DataPropertyName = "TenKhoa";
+            this.colKhoa.FillWeight = 150F;
+            this.colKhoa.HeaderText = "Khoa";
+            this.colKhoa.MinimumWidth = 6;
+            this.colKhoa.Name = "colKhoa";
+            this.colKhoa.ReadOnly = true;
+            // 
+            // colLop
+            // 
+            this.colLop.DataPropertyName = "MaLop";
+            this.colLop.FillWeight = 70F;
+            this.colLop.HeaderText = "Lớp";
+            this.colLop.MinimumWidth = 6;
+            this.colLop.Name = "colLop";
+            this.colLop.ReadOnly = true;
+            // 
+            // colSiSo
+            // 
+            this.colSiSo.DataPropertyName = "SiSo";
+            this.colSiSo.FillWeight = 50F;
+            this.colSiSo.HeaderText = "Sĩ số";
+            this.colSiSo.MinimumWidth = 6;
+            this.colSiSo.Name = "colSiSo";
+            this.colSiSo.ReadOnly = true;
+            // 
+            // colNam
+            // 
+            this.colNam.DataPropertyName = "SoNam";
+            this.colNam.FillWeight = 50F;
+            this.colNam.HeaderText = "Nam";
+            this.colNam.MinimumWidth = 6;
+            this.colNam.Name = "colNam";
+            this.colNam.ReadOnly = true;
+            // 
+            // colNu
+            // 
+            this.colNu.DataPropertyName = "SoNu";
+            this.colNu.FillWeight = 50F;
+            this.colNu.HeaderText = "Nữ";
+            this.colNu.MinimumWidth = 6;
+            this.colNu.Name = "colNu";
+            this.colNu.ReadOnly = true;
             // 
             // label8
             // 
@@ -436,65 +430,6 @@
             this.label8.TabIndex = 14;
             this.label8.Text = "Thống kê số lượng sinh viên theo khoa";
             // 
-            // btnQuanLyLop
-            // 
-            this.btnQuanLyLop.BackColor = System.Drawing.Color.RoyalBlue;
-            this.btnQuanLyLop.FlatAppearance.BorderSize = 0;
-            this.btnQuanLyLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnQuanLyLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnQuanLyLop.ForeColor = System.Drawing.Color.White;
-            this.btnQuanLyLop.Location = new System.Drawing.Point(3, 344);
-            this.btnQuanLyLop.Name = "btnQuanLyLop";
-            this.btnQuanLyLop.Size = new System.Drawing.Size(185, 44);
-            this.btnQuanLyLop.TabIndex = 17;
-            this.btnQuanLyLop.Text = "Quản lý lớp";
-            this.btnQuanLyLop.UseVisualStyleBackColor = false;
-            // 
-            // colKhoa
-            // 
-            this.colKhoa.DataPropertyName = "TenKhoa";
-            this.colKhoa.HeaderText = "Khoa";
-            this.colKhoa.MinimumWidth = 6;
-            this.colKhoa.Name = "colKhoa";
-            this.colKhoa.ReadOnly = true;
-            this.colKhoa.FillWeight = 150F;
-            // 
-            // colLop
-            // 
-            this.colLop.DataPropertyName = "MaLop";
-            this.colLop.HeaderText = "Lớp";
-            this.colLop.MinimumWidth = 6;
-            this.colLop.Name = "colLop";
-            this.colLop.ReadOnly = true;
-            this.colLop.FillWeight = 70F;
-            // 
-            // colSiSo
-            // 
-            this.colSiSo.DataPropertyName = "SiSo";
-            this.colSiSo.HeaderText = "Sĩ số";
-            this.colSiSo.MinimumWidth = 6;
-            this.colSiSo.Name = "colSiSo";
-            this.colSiSo.ReadOnly = true;
-            this.colSiSo.FillWeight = 50F;
-            // 
-            // colNam
-            // 
-            this.colNam.DataPropertyName = "SoNam";
-            this.colNam.HeaderText = "Nam";
-            this.colNam.MinimumWidth = 6;
-            this.colNam.Name = "colNam";
-            this.colNam.ReadOnly = true;
-            this.colNam.FillWeight = 50F;
-            // 
-            // colNu
-            // 
-            this.colNu.DataPropertyName = "SoNu";
-            this.colNu.HeaderText = "Nữ";
-            this.colNu.MinimumWidth = 6;
-            this.colNu.Name = "colNu";
-            this.colNu.ReadOnly = true;
-            this.colNu.FillWeight = 50F;
-            // 
             // fThongKe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -503,8 +438,6 @@
             this.Controls.Add(this.label8);
             this.Controls.Add(this.dgvDanhSach);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.cboLoaiBaoCao);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -543,11 +476,6 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.Button btnThongKe;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cboLoaiBaoCao;
         private System.Windows.Forms.PictureBox pictureBox2;

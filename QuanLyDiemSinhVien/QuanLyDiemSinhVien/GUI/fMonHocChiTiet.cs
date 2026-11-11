@@ -5,11 +5,11 @@ using QuanLyDiemSinhVien.DTO;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>Hộp thoại thêm / sửa môn học.</summary>
+
     public partial class fMonHocChiTiet : Form
     {
         private readonly MonHocBLL bll = new MonHocBLL();
-        private readonly string maSua;   // null = thêm mới
+        private readonly string maSua;   
 
         public fMonHocChiTiet() : this(null) { }
 
@@ -40,7 +40,6 @@ namespace QuanLyDiemSinhVien.GUI
             }
         }
 
-        // Nút Lưu (sự kiện đã gắn trong Designer)
         private void btnLuu_Click(object sender, EventArgs e)
         {
             var m = new MonHoc

@@ -96,8 +96,8 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(41, 293);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Name = "txtMatKhau";
+            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Size = new System.Drawing.Size(543, 30);
             this.txtMatKhau.TabIndex = 1;
             // 
@@ -105,8 +105,8 @@
             // 
             this.txtXNMatKhau.Location = new System.Drawing.Point(41, 388);
             this.txtXNMatKhau.Margin = new System.Windows.Forms.Padding(4);
-            this.txtXNMatKhau.PasswordChar = '•';
             this.txtXNMatKhau.Name = "txtXNMatKhau";
+            this.txtXNMatKhau.PasswordChar = '•';
             this.txtXNMatKhau.Size = new System.Drawing.Size(543, 30);
             this.txtXNMatKhau.TabIndex = 1;
             // 
@@ -170,6 +170,7 @@
             this.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "fQuenMatKhau";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fQuenMatKhau";
             this.ResumeLayout(false);
             this.PerformLayout();

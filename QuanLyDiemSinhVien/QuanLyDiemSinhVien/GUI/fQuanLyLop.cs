@@ -6,11 +6,7 @@ using QuanLyDiemSinhVien.DTO;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>
-    /// Quản lý lớp. button6 = Thêm, button8 = Sửa, button9 = Xóa, button10 = Mới.
-    /// Yêu cầu 1: lớp mới luôn có Sĩ số = 0; sĩ số chỉ thay đổi khi thêm/xóa/chuyển sinh viên.
-    /// txtKhoa: nhập MÃ khoa (VD: CNTT, KT) - có gợi ý khi gõ.
-    /// </summary>
+
     public partial class fQuanLyLop : Form
     {
         private readonly LopBLL bll = new LopBLL();

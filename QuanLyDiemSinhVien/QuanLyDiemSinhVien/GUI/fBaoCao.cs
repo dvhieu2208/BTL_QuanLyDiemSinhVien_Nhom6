@@ -6,24 +6,17 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>Các loại báo cáo của chương trình.</summary>
+
     public enum LoaiBaoCao
     {
-        DiemTheoLopMon,     // Yêu cầu 7 - Reports\rptDiemLopMon.rpt    - bảng DiemLopMon
-        BangDiemSinhVien,   // Yêu cầu 8 - Reports\rptBangDiemSV.rpt    - bảng BangDiemSV
-        ThoiKhoaBieu        // Yêu cầu 9 - Reports\rptThoiKhoaBieu.rpt  - bảng ThoiKhoaBieu
+        DiemTheoLopMon,     
+        BangDiemSinhVien,  
+        ThoiKhoaBieu     
     }
 
-    /// <summary>
-    /// Form hiển thị báo cáo (chạy giống bản đầu tiên):
-    /// - Nếu có file Reports\*.rpt  -> mở bằng Crystal Report.
-    /// - Nếu chưa có file .rpt       -> hiện dữ liệu báo cáo ở dgvDuLieu, KHÔNG khởi động Crystal,
-    ///   nên máy chưa cài Crystal Reports Runtime vẫn chạy bình thường.
-    /// Dữ liệu lấy từ thủ tục lưu trữ (sp_BaoCao_...).
-    /// </summary>
     public partial class fBaoCao : Form
     {
-        private IDisposable report;   // ReportDocument của Crystal (nếu có dùng)
+        private IDisposable report;
 
         public static string TenFile(LoaiBaoCao loai)
         {
@@ -67,7 +60,6 @@ namespace QuanLyDiemSinhVien.GUI
         {
             Text = tieuDe;
 
-            // Thêm cột tiêu đề + ngày in để dùng trên report
             DataTable dt = duLieu.Copy();
             dt.TableName = TenBang(loai);
             if (!dt.Columns.Contains("TieuDe")) dt.Columns.Add("TieuDe", typeof(string));
@@ -95,15 +87,10 @@ namespace QuanLyDiemSinhVien.GUI
                 }
             }
 
-            // Chưa có file .rpt (hoặc Crystal lỗi): hiện dữ liệu báo cáo ở lưới
             lblThongBao.Text = tieuDe.ToUpper() + "   (ngày in: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + ")";
             dgvDuLieu.DataSource = dt;
         }
 
-        /// <summary>
-        /// Chỉ gọi khi có file .rpt. Tách riêng (NoInlining) để thư viện Crystal chỉ được nạp
-        /// khi thật sự cần, tránh lỗi trên máy chưa cài Crystal Reports Runtime.
-        /// </summary>
         [MethodImpl(MethodImplOptions.NoInlining)]
         private void MoCrystal(string duongDan, DataTable dt)
         {

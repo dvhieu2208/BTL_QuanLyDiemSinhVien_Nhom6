@@ -6,11 +6,7 @@ using QuanLyDiemSinhVien.GUI;
 
 namespace QuanLyDiemSinhVien
 {
-    /// <summary>
-    /// Quản lý lớp học phần = thời khóa biểu (lớp nào học môn nào, kỳ nào, thứ/ca/phòng).
-    /// Lọc theo cboHocKy, cboKhoa, cboMonHoc; textBox1 tìm theo tên môn / tên lớp.
-    /// Yêu cầu 9: chọn 1 dòng rồi bấm btnInTKB để in thời khóa biểu của lớp đó trong học kỳ đó.
-    /// </summary>
+
     public partial class fQuanLyLopHocPhan : Form
     {
         private readonly ThoiKhoaBieuBLL bll = new ThoiKhoaBieuBLL();

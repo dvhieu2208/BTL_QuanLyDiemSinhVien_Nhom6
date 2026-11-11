@@ -7,10 +7,7 @@ using QuanLyDiemSinhVien.GUI;
 
 namespace QuanLyDiemSinhVien
 {
-    /// <summary>
-    /// Yêu cầu 8: xem và in bảng điểm các môn theo mã sinh viên.
-    /// textBox1 = mã SV, cboHocKy = lọc học kỳ, btnTimKiem = Xem, button6 = In.
-    /// </summary>
+
     public partial class fXemBangDiem : Form
     {
         private readonly BaoCaoBLL baoCao = new BaoCaoBLL();
@@ -49,7 +46,7 @@ namespace QuanLyDiemSinhVien
         {
             try
             {
-                // Gợi ý mã sinh viên khi gõ
+
                 var goiY = new AutoCompleteStringCollection();
                 foreach (SinhVien sv in svBll.LayTatCa()) goiY.Add(sv.Ma);
                 textBox1.AutoCompleteCustomSource = goiY;
@@ -96,7 +93,6 @@ namespace QuanLyDiemSinhVien
             }
         }
 
-        /// <summary>In bảng điểm bằng Crystal Report.</summary>
         private void InBangDiem()
         {
             if (maSVDangXem == null) XemBangDiem();
@@ -113,7 +109,7 @@ namespace QuanLyDiemSinhVien
             }
         }
 
-        // ---- Các hàm sự kiện do Designer tạo sẵn ----
+
         private void cboHocKy_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (!dangNap && maSVDangXem != null) XemBangDiem();

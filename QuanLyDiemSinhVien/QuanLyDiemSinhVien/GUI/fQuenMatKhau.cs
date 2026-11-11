@@ -4,10 +4,7 @@ using QuanLyDiemSinhVien.BLL;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>
-    /// Quên mật khẩu: nhập tên đăng nhập -> lbCauHoiBaoMat hiện câu hỏi bảo mật ->
-    /// nhập câu trả lời vào textBox1 -> trả lời đúng thì đặt mật khẩu mới.
-    /// </summary>
+
     public partial class fQuenMatKhau : Form
     {
         private readonly DangNhapBLL bll = new DangNhapBLL();

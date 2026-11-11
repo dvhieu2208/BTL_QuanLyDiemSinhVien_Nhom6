@@ -4,11 +4,7 @@ using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>
-    /// Phân trang cho DataGridView bằng các nút "&lt;", "1".."5", "&gt;" đã thiết kế sẵn trên form.
-    /// Lưới luôn gắn với toàn bộ bảng dữ liệu, mỗi trang chỉ lọc (RowFilter) các dòng cần hiện,
-    /// nên dữ liệu sửa trên lưới (VD: nhập điểm) vẫn giữ nguyên khi chuyển trang.
-    /// </summary>
+
     internal class PhanTrang
     {
         private const string COT_DONG = "__Dong";
@@ -84,7 +80,6 @@ namespace QuanLyDiemSinhVien.GUI
             int ketThuc = Math.Min(batDau + KichThuocTrang, nguon.Rows.Count);
             nguon.DefaultView.RowFilter = string.Format("{0} > {1} AND {0} <= {2}", COT_DONG, batDau, ketThuc);
 
-            // Cập nhật số trên các nút trang
             int tong = SoTrang;
             int dau = Math.Max(1, Math.Min(TrangHienTai - nutSo.Length / 2, tong - nutSo.Length + 1));
             for (int i = 0; i < nutSo.Length; i++)

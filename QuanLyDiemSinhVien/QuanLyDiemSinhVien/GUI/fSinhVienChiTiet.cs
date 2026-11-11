@@ -5,19 +5,13 @@ using QuanLyDiemSinhVien.DTO;
 
 namespace QuanLyDiemSinhVien.GUI
 {
-    /// <summary>
-    /// Nhập / sửa thông tin sinh viên.
-    /// - Yêu cầu 2: chọn Khoa -> cboLop chỉ hiện các lớp của khoa.
-    /// - Yêu cầu 3: chọn Lớp -> dgvDanhSach hiện danh sách SV của lớp + sĩ số (lbDanhSach);
-    ///   sau khi lưu, sĩ số được trigger trong CSDL cập nhật và hiển thị lại.
-    /// - Yêu cầu 4: chọn Khoa -> cboChuyenNganh chỉ hiện của khoa.
-    /// </summary>
+
     public partial class fSinhVienChiTiet : Form
     {
         private readonly SinhVienBLL bll = new SinhVienBLL();
         private readonly LopBLL lopBll = new LopBLL();
         private readonly DanhMucBLL danhMuc = new DanhMucBLL();
-        private readonly string maSVSua;      // null = thêm mới
+        private readonly string maSVSua;   
         private readonly string khoaMacDinh;
         private readonly string lopMacDinh;
         private bool dangNap;
