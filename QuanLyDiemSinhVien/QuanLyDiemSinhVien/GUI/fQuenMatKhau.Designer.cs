@@ -96,6 +96,7 @@
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(41, 293);
             this.txtMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtMatKhau.PasswordChar = '•';
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(543, 30);
             this.txtMatKhau.TabIndex = 1;
@@ -104,6 +105,7 @@
             // 
             this.txtXNMatKhau.Location = new System.Drawing.Point(41, 388);
             this.txtXNMatKhau.Margin = new System.Windows.Forms.Padding(4);
+            this.txtXNMatKhau.PasswordChar = '•';
             this.txtXNMatKhau.Name = "txtXNMatKhau";
             this.txtXNMatKhau.Size = new System.Drawing.Size(543, 30);
             this.txtXNMatKhau.TabIndex = 1;

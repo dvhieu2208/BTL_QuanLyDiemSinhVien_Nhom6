@@ -30,6 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQuanLyLopHocPhan));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnInTKB = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,6 +55,16 @@
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.colSoDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colPhong = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colCa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colThu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDVHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button13 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
@@ -318,6 +329,7 @@
             this.cboHocKy.FormattingEnabled = true;
             this.cboHocKy.ItemHeight = 24;
             this.cboHocKy.Location = new System.Drawing.Point(221, 170);
+            this.cboHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(195, 30);
             this.cboHocKy.TabIndex = 10;
@@ -328,6 +340,7 @@
             this.cboKhoa.FormattingEnabled = true;
             this.cboKhoa.ItemHeight = 24;
             this.cboKhoa.Location = new System.Drawing.Point(450, 170);
+            this.cboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(195, 30);
             this.cboKhoa.TabIndex = 11;
@@ -338,6 +351,7 @@
             this.cboMonHoc.FormattingEnabled = true;
             this.cboMonHoc.ItemHeight = 24;
             this.cboMonHoc.Location = new System.Drawing.Point(671, 170);
+            this.cboMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMonHoc.Name = "cboMonHoc";
             this.cboMonHoc.Size = new System.Drawing.Size(195, 30);
             this.cboMonHoc.TabIndex = 12;
@@ -353,7 +367,24 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colHocKy,
+            this.colLop,
+            this.colMaMon,
+            this.colTenMon,
+            this.colDVHT,
+            this.colThu,
+            this.colCa,
+            this.colPhong,
+            this.colSiSo,
+            this.colSoDiem});
             this.dgvDanhSach.Location = new System.Drawing.Point(221, 218);
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
@@ -437,11 +468,113 @@
             this.btnQuanLyLop.Text = "Quản lý lớp";
             this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
+            // btnInTKB
+            // 
+            this.btnInTKB.BackColor = System.Drawing.Color.DarkOrange;
+            this.btnInTKB.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInTKB.ForeColor = System.Drawing.Color.White;
+            this.btnInTKB.Location = new System.Drawing.Point(1190, 105);
+            this.btnInTKB.Size = new System.Drawing.Size(120, 43);
+            this.btnInTKB.Text = "In TKB";
+            this.btnInTKB.UseVisualStyleBackColor = false;
+            this.btnInTKB.Name = "btnInTKB";
+            // 
+            // colHocKy
+            // 
+            this.colHocKy.DataPropertyName = "HocKy";
+            this.colHocKy.HeaderText = "Học kỳ";
+            this.colHocKy.MinimumWidth = 6;
+            this.colHocKy.Name = "colHocKy";
+            this.colHocKy.ReadOnly = true;
+            this.colHocKy.FillWeight = 50F;
+            // 
+            // colLop
+            // 
+            this.colLop.DataPropertyName = "MaLop";
+            this.colLop.HeaderText = "Lớp";
+            this.colLop.MinimumWidth = 6;
+            this.colLop.Name = "colLop";
+            this.colLop.ReadOnly = true;
+            this.colLop.FillWeight = 60F;
+            // 
+            // colMaMon
+            // 
+            this.colMaMon.DataPropertyName = "MaMon";
+            this.colMaMon.HeaderText = "Mã môn";
+            this.colMaMon.MinimumWidth = 6;
+            this.colMaMon.Name = "colMaMon";
+            this.colMaMon.ReadOnly = true;
+            this.colMaMon.FillWeight = 60F;
+            // 
+            // colTenMon
+            // 
+            this.colTenMon.DataPropertyName = "TenMon";
+            this.colTenMon.HeaderText = "Môn học";
+            this.colTenMon.MinimumWidth = 6;
+            this.colTenMon.Name = "colTenMon";
+            this.colTenMon.ReadOnly = true;
+            this.colTenMon.FillWeight = 180F;
+            // 
+            // colDVHT
+            // 
+            this.colDVHT.DataPropertyName = "DVHT";
+            this.colDVHT.HeaderText = "ĐVHT";
+            this.colDVHT.MinimumWidth = 6;
+            this.colDVHT.Name = "colDVHT";
+            this.colDVHT.ReadOnly = true;
+            this.colDVHT.FillWeight = 45F;
+            // 
+            // colThu
+            // 
+            this.colThu.DataPropertyName = "TenThu";
+            this.colThu.HeaderText = "Thứ";
+            this.colThu.MinimumWidth = 6;
+            this.colThu.Name = "colThu";
+            this.colThu.ReadOnly = true;
+            this.colThu.FillWeight = 60F;
+            // 
+            // colCa
+            // 
+            this.colCa.DataPropertyName = "CaHoc";
+            this.colCa.HeaderText = "Ca";
+            this.colCa.MinimumWidth = 6;
+            this.colCa.Name = "colCa";
+            this.colCa.ReadOnly = true;
+            this.colCa.FillWeight = 40F;
+            // 
+            // colPhong
+            // 
+            this.colPhong.DataPropertyName = "TenPhong";
+            this.colPhong.HeaderText = "Phòng";
+            this.colPhong.MinimumWidth = 6;
+            this.colPhong.Name = "colPhong";
+            this.colPhong.ReadOnly = true;
+            this.colPhong.FillWeight = 90F;
+            // 
+            // colSiSo
+            // 
+            this.colSiSo.DataPropertyName = "SiSo";
+            this.colSiSo.HeaderText = "Sĩ số";
+            this.colSiSo.MinimumWidth = 6;
+            this.colSiSo.Name = "colSiSo";
+            this.colSiSo.ReadOnly = true;
+            this.colSiSo.FillWeight = 45F;
+            // 
+            // colSoDiem
+            // 
+            this.colSoDiem.DataPropertyName = "SoDiem";
+            this.colSoDiem.HeaderText = "Đã nhập điểm";
+            this.colSoDiem.MinimumWidth = 6;
+            this.colSoDiem.Name = "colSoDiem";
+            this.colSoDiem.ReadOnly = true;
+            this.colSoDiem.FillWeight = 60F;
+            // 
             // fQuanLyLopHocPhan
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1344, 762);
+            this.Controls.Add(this.btnInTKB);
             this.Controls.Add(this.button18);
             this.Controls.Add(this.btn5);
             this.Controls.Add(this.btn4);
@@ -510,5 +643,16 @@
         private System.Windows.Forms.Button button18;
         private System.Windows.Forms.Button btnXemBangDiem;
         private System.Windows.Forms.Button btnQuanLyLop;
+        private System.Windows.Forms.Button btnInTKB;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colHocKy;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDVHT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colThu;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colCa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colPhong;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSiSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoDiem;
     }
 }

@@ -112,6 +112,21 @@
             // numDVHT
             // 
             this.numDVHT.Location = new System.Drawing.Point(219, 205);
+            this.numDVHT.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numDVHT.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numDVHT.Value = new decimal(new int[] {
+            3,
+            0,
+            0,
+            0});
             this.numDVHT.Name = "numDVHT";
             this.numDVHT.Size = new System.Drawing.Size(120, 30);
             this.numDVHT.TabIndex = 3;

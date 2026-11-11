@@ -58,6 +58,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.colNu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label8 = new System.Windows.Forms.Label();
             this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
@@ -348,10 +353,10 @@
             this.cboLoaiBaoCao.FormattingEnabled = true;
             this.cboLoaiBaoCao.Location = new System.Drawing.Point(971, 114);
             this.cboLoaiBaoCao.Margin = new System.Windows.Forms.Padding(4);
+            this.cboLoaiBaoCao.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLoaiBaoCao.Name = "cboLoaiBaoCao";
             this.cboLoaiBaoCao.Size = new System.Drawing.Size(294, 34);
             this.cboLoaiBaoCao.TabIndex = 11;
-            this.cboLoaiBaoCao.Text = "Thống kê kết quả học tập";
             // 
             // panel3
             // 
@@ -400,8 +405,20 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colKhoa,
+            this.colLop,
+            this.colSiSo,
+            this.colNam,
+            this.colNu});
             this.dgvDanhSach.Location = new System.Drawing.Point(761, 240);
             this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
@@ -432,6 +449,51 @@
             this.btnQuanLyLop.TabIndex = 17;
             this.btnQuanLyLop.Text = "Quản lý lớp";
             this.btnQuanLyLop.UseVisualStyleBackColor = false;
+            // 
+            // colKhoa
+            // 
+            this.colKhoa.DataPropertyName = "TenKhoa";
+            this.colKhoa.HeaderText = "Khoa";
+            this.colKhoa.MinimumWidth = 6;
+            this.colKhoa.Name = "colKhoa";
+            this.colKhoa.ReadOnly = true;
+            this.colKhoa.FillWeight = 150F;
+            // 
+            // colLop
+            // 
+            this.colLop.DataPropertyName = "MaLop";
+            this.colLop.HeaderText = "Lớp";
+            this.colLop.MinimumWidth = 6;
+            this.colLop.Name = "colLop";
+            this.colLop.ReadOnly = true;
+            this.colLop.FillWeight = 70F;
+            // 
+            // colSiSo
+            // 
+            this.colSiSo.DataPropertyName = "SiSo";
+            this.colSiSo.HeaderText = "Sĩ số";
+            this.colSiSo.MinimumWidth = 6;
+            this.colSiSo.Name = "colSiSo";
+            this.colSiSo.ReadOnly = true;
+            this.colSiSo.FillWeight = 50F;
+            // 
+            // colNam
+            // 
+            this.colNam.DataPropertyName = "SoNam";
+            this.colNam.HeaderText = "Nam";
+            this.colNam.MinimumWidth = 6;
+            this.colNam.Name = "colNam";
+            this.colNam.ReadOnly = true;
+            this.colNam.FillWeight = 50F;
+            // 
+            // colNu
+            // 
+            this.colNu.DataPropertyName = "SoNu";
+            this.colNu.HeaderText = "Nữ";
+            this.colNu.MinimumWidth = 6;
+            this.colNu.Name = "colNu";
+            this.colNu.ReadOnly = true;
+            this.colNu.FillWeight = 50F;
             // 
             // fThongKe
             // 
@@ -496,5 +558,10 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Button btnXemBangDiem;
         private System.Windows.Forms.Button btnQuanLyLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSiSo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNam;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNu;
     }
 }

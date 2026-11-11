@@ -14,9 +14,9 @@ namespace QuanLyDiemSinhVien.BLL
     {
         private readonly ThoiKhoaBieuDAL dal = new ThoiKhoaBieuDAL();
 
-        public DataTable LayDanhSach(int? hocKy, string maLop, string maMon, string tuKhoa)
+        public DataTable LayDanhSach(int? hocKy, string maLop, string maMon, string tuKhoa, string maKhoa = null)
         {
-            return dal.LayDanhSach(hocKy, maLop, maMon, tuKhoa);
+            return dal.LayDanhSach(hocKy, maLop, maMon, tuKhoa, maKhoa);
         }
 
         public DataTable LayMonTheoLopHocKy(string maLop, int hocKy) { return dal.LayMonTheoLopHocKy(maLop, hocKy); }

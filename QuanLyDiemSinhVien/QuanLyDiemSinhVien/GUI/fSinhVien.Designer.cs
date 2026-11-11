@@ -54,6 +54,15 @@
             this.cboLop = new System.Windows.Forms.ComboBox();
             this.cboTinhTrang = new System.Windows.Forms.ComboBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.colChucVu = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colQue = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colChuyenNganh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colGioiTinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.button13 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn1 = new System.Windows.Forms.Button();
@@ -319,13 +328,14 @@
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(90, 22);
             this.label8.TabIndex = 5;
-            this.label8.Text = "Tình trạng";
+            this.label8.Text = "Chuyên ngành";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // cboKhoa
             // 
             this.cboKhoa.FormattingEnabled = true;
             this.cboKhoa.Location = new System.Drawing.Point(216, 210);
+            this.cboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(139, 30);
             this.cboKhoa.TabIndex = 6;
@@ -334,6 +344,7 @@
             // 
             this.cboLop.FormattingEnabled = true;
             this.cboLop.Location = new System.Drawing.Point(384, 210);
+            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(139, 30);
             this.cboLop.TabIndex = 6;
@@ -342,6 +353,7 @@
             // 
             this.cboTinhTrang.FormattingEnabled = true;
             this.cboTinhTrang.Location = new System.Drawing.Point(552, 210);
+            this.cboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboTinhTrang.Name = "cboTinhTrang";
             this.cboTinhTrang.Size = new System.Drawing.Size(139, 30);
             this.cboTinhTrang.TabIndex = 6;
@@ -349,7 +361,23 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaSV,
+            this.colTenSV,
+            this.colNgaySinh,
+            this.colGioiTinh,
+            this.colLop,
+            this.colChuyenNganh,
+            this.colQue,
+            this.colKhoa,
+            this.colChucVu});
             this.dgvDanhSach.Location = new System.Drawing.Point(216, 246);
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
@@ -451,6 +479,88 @@
             this.btnQuanLyLop.Text = "Quản lý lớp";
             this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
+            // colMaSV
+            // 
+            this.colMaSV.DataPropertyName = "MaSV";
+            this.colMaSV.HeaderText = "Mã SV";
+            this.colMaSV.MinimumWidth = 6;
+            this.colMaSV.Name = "colMaSV";
+            this.colMaSV.ReadOnly = true;
+            this.colMaSV.FillWeight = 70F;
+            // 
+            // colTenSV
+            // 
+            this.colTenSV.DataPropertyName = "TenSV";
+            this.colTenSV.HeaderText = "Họ và tên";
+            this.colTenSV.MinimumWidth = 6;
+            this.colTenSV.Name = "colTenSV";
+            this.colTenSV.ReadOnly = true;
+            this.colTenSV.FillWeight = 150F;
+            // 
+            // colNgaySinh
+            // 
+            this.colNgaySinh.DataPropertyName = "NgaySinh";
+            this.colNgaySinh.HeaderText = "Ngày sinh";
+            this.colNgaySinh.MinimumWidth = 6;
+            this.colNgaySinh.DefaultCellStyle.Format = "dd/MM/yyyy";
+            this.colNgaySinh.Name = "colNgaySinh";
+            this.colNgaySinh.ReadOnly = true;
+            this.colNgaySinh.FillWeight = 80F;
+            // 
+            // colGioiTinh
+            // 
+            this.colGioiTinh.DataPropertyName = "GioiTinh";
+            this.colGioiTinh.HeaderText = "Giới tính";
+            this.colGioiTinh.MinimumWidth = 6;
+            this.colGioiTinh.Name = "colGioiTinh";
+            this.colGioiTinh.ReadOnly = true;
+            this.colGioiTinh.FillWeight = 60F;
+            // 
+            // colLop
+            // 
+            this.colLop.DataPropertyName = "MaLop";
+            this.colLop.HeaderText = "Lớp";
+            this.colLop.MinimumWidth = 6;
+            this.colLop.Name = "colLop";
+            this.colLop.ReadOnly = true;
+            this.colLop.FillWeight = 70F;
+            // 
+            // colChuyenNganh
+            // 
+            this.colChuyenNganh.DataPropertyName = "TenChuyenNganh";
+            this.colChuyenNganh.HeaderText = "Chuyên ngành";
+            this.colChuyenNganh.MinimumWidth = 6;
+            this.colChuyenNganh.Name = "colChuyenNganh";
+            this.colChuyenNganh.ReadOnly = true;
+            this.colChuyenNganh.FillWeight = 130F;
+            // 
+            // colQue
+            // 
+            this.colQue.DataPropertyName = "TenQue";
+            this.colQue.HeaderText = "Quê";
+            this.colQue.MinimumWidth = 6;
+            this.colQue.Name = "colQue";
+            this.colQue.ReadOnly = true;
+            this.colQue.FillWeight = 80F;
+            // 
+            // colKhoa
+            // 
+            this.colKhoa.DataPropertyName = "TenKhoa";
+            this.colKhoa.HeaderText = "Khoa";
+            this.colKhoa.MinimumWidth = 6;
+            this.colKhoa.Name = "colKhoa";
+            this.colKhoa.ReadOnly = true;
+            this.colKhoa.FillWeight = 120F;
+            // 
+            // colChucVu
+            // 
+            this.colChucVu.DataPropertyName = "TenChucVu";
+            this.colChucVu.HeaderText = "Chức vụ";
+            this.colChucVu.MinimumWidth = 6;
+            this.colChucVu.Name = "colChucVu";
+            this.colChucVu.ReadOnly = true;
+            this.colChucVu.FillWeight = 80F;
+            // 
             // fSinhVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -529,5 +639,14 @@
         private System.Windows.Forms.Button btnXemBangDiem;
         private System.Windows.Forms.Button btnTimKiem;
         private System.Windows.Forms.Button btnQuanLyLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenSV;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colNgaySinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colGioiTinh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colChuyenNganh;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colQue;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colChucVu;
     }
 }

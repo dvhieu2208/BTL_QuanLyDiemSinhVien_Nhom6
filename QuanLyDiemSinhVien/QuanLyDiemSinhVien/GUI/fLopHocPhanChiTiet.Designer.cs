@@ -103,6 +103,7 @@
             // 
             this.cboLop.FormattingEnabled = true;
             this.cboLop.Location = new System.Drawing.Point(205, 36);
+            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(317, 30);
             this.cboLop.TabIndex = 1;
@@ -111,6 +112,7 @@
             // 
             this.cboMonHoc.FormattingEnabled = true;
             this.cboMonHoc.Location = new System.Drawing.Point(205, 116);
+            this.cboMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMonHoc.Name = "cboMonHoc";
             this.cboMonHoc.Size = new System.Drawing.Size(317, 30);
             this.cboMonHoc.TabIndex = 1;
@@ -118,6 +120,21 @@
             // numHocKy
             // 
             this.numHocKy.Location = new System.Drawing.Point(205, 197);
+            this.numHocKy.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.numHocKy.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.numHocKy.Value = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
             this.numHocKy.Name = "numHocKy";
             this.numHocKy.Size = new System.Drawing.Size(120, 30);
             this.numHocKy.TabIndex = 2;
@@ -126,6 +143,7 @@
             // 
             this.cboThu.FormattingEnabled = true;
             this.cboThu.Location = new System.Drawing.Point(205, 276);
+            this.cboThu.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboThu.Name = "cboThu";
             this.cboThu.Size = new System.Drawing.Size(224, 30);
             this.cboThu.TabIndex = 1;
@@ -134,6 +152,7 @@
             // 
             this.cboCaHoc.FormattingEnabled = true;
             this.cboCaHoc.Location = new System.Drawing.Point(205, 356);
+            this.cboCaHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboCaHoc.Name = "cboCaHoc";
             this.cboCaHoc.Size = new System.Drawing.Size(317, 30);
             this.cboCaHoc.TabIndex = 1;
@@ -142,6 +161,7 @@
             // 
             this.cboPhongHoc.FormattingEnabled = true;
             this.cboPhongHoc.Location = new System.Drawing.Point(205, 436);
+            this.cboPhongHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboPhongHoc.Name = "cboPhongHoc";
             this.cboPhongHoc.Size = new System.Drawing.Size(317, 30);
             this.cboPhongHoc.TabIndex = 1;

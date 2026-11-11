@@ -47,6 +47,10 @@
             this.btnXoa = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.colSoLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDVHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.cboDVHT = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -281,7 +285,18 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaMon,
+            this.colTenMon,
+            this.colDVHT,
+            this.colSoLop});
             this.dgvDanhSach.Location = new System.Drawing.Point(216, 170);
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
@@ -302,6 +317,7 @@
             this.cboDVHT.FormattingEnabled = true;
             this.cboDVHT.ItemHeight = 28;
             this.cboDVHT.Location = new System.Drawing.Point(646, 126);
+            this.cboDVHT.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboDVHT.Name = "cboDVHT";
             this.cboDVHT.Size = new System.Drawing.Size(216, 34);
             this.cboDVHT.TabIndex = 9;
@@ -393,6 +409,42 @@
             this.btnQuanLyLop.Text = "Quản lý lớp";
             this.btnQuanLyLop.UseVisualStyleBackColor = false;
             // 
+            // colMaMon
+            // 
+            this.colMaMon.DataPropertyName = "MaMon";
+            this.colMaMon.HeaderText = "Mã môn";
+            this.colMaMon.MinimumWidth = 6;
+            this.colMaMon.Name = "colMaMon";
+            this.colMaMon.ReadOnly = true;
+            this.colMaMon.FillWeight = 60F;
+            // 
+            // colTenMon
+            // 
+            this.colTenMon.DataPropertyName = "TenMon";
+            this.colTenMon.HeaderText = "Tên môn học";
+            this.colTenMon.MinimumWidth = 6;
+            this.colTenMon.Name = "colTenMon";
+            this.colTenMon.ReadOnly = true;
+            this.colTenMon.FillWeight = 200F;
+            // 
+            // colDVHT
+            // 
+            this.colDVHT.DataPropertyName = "DVHT";
+            this.colDVHT.HeaderText = "Số ĐVHT";
+            this.colDVHT.MinimumWidth = 6;
+            this.colDVHT.Name = "colDVHT";
+            this.colDVHT.ReadOnly = true;
+            this.colDVHT.FillWeight = 50F;
+            // 
+            // colSoLop
+            // 
+            this.colSoLop.DataPropertyName = "SoLop";
+            this.colSoLop.HeaderText = "Số lớp đang học";
+            this.colSoLop.MinimumWidth = 6;
+            this.colSoLop.Name = "colSoLop";
+            this.colSoLop.ReadOnly = true;
+            this.colSoLop.FillWeight = 60F;
+            // 
             // fQuanLyMonHoc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -458,5 +510,9 @@
         private System.Windows.Forms.Button btnDangXuat;
         private System.Windows.Forms.Button btnXemBangDiem;
         private System.Windows.Forms.Button btnQuanLyLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenMon;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colDVHT;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSoLop;
     }
 }

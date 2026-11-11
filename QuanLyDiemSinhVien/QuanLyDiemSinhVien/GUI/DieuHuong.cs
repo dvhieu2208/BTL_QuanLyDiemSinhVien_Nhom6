@@ -1,21 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.GUI
 {
+    /// <summary>
+    /// Gắn sự kiện cho thanh menu bên trái (dùng chung cho mọi form)
+    /// và điều hướng giữa các chức năng.
+    /// </summary>
     internal static class DieuHuong
     {
         /// <summary>Form cần mở tiếp theo sau khi form hiện tại đóng.</summary>
         public static Type FormTiepTheo { get; set; }
         public static bool DangXuat { get; set; }
-
-        private static readonly Color MauNenMenu = Color.RoyalBlue;
-        private static readonly Color MauDangChon = Color.Navy;
 
         private static Type TimDich(string chu, out bool laDangXuat)
         {
@@ -47,8 +45,9 @@ namespace QuanLyDiemSinhVien.GUI
 
         public static void GanMenu(Form form)
         {
-            Control menu = TatCa(form).OfType<Panel>().FirstOrDefault(p => p.Dock == DockStyle.Left);
-            if (menu == null) menu = form;
+            // Thanh menu = khung chứa nút "Đăng xuất"
+            Button nutDangXuat = TatCa(form).OfType<Button>().FirstOrDefault(b => b.Text.Trim() == "Đăng xuất");
+            Control menu = nutDangXuat != null && nutDangXuat.Parent != null ? nutDangXuat.Parent : form;
 
             foreach (Button nut in TatCa(menu).OfType<Button>().ToList())
             {
@@ -56,21 +55,12 @@ namespace QuanLyDiemSinhVien.GUI
                 Type dich = TimDich(nut.Text, out laDangXuat);
                 if (dich == null && !laDangXuat) continue;
 
-                if (nut.Text.Trim() == "Cài đặt") nut.Text = "Quản lý lớp";
-                nut.Cursor = Cursors.Hand;
-
-                if (dich == form.GetType())
-                {
-                    nut.FlatStyle = FlatStyle.Flat;
-                    nut.UseVisualStyleBackColor = false;
-                    nut.BackColor = MauDangChon;
-                }
-
                 Type dichCuoi = dich;
                 bool dangXuatCuoi = laDangXuat;
                 nut.Click += (s, e) => ChuyenDen(form, dichCuoi, dangXuatCuoi);
             }
 
+            // Hiện tên người dùng ở khung thông tin tài khoản (các nhãn "labelX" chưa đặt chữ)
             var nhan = TatCa(menu).OfType<Label>()
                                   .Where(l => l.Text.StartsWith("label"))
                                   .OrderBy(l => l.Top).ToList();
@@ -81,6 +71,7 @@ namespace QuanLyDiemSinhVien.GUI
             }
         }
 
+        /// <summary>Form hộp thoại (ShowDialog) bị hủy đóng thì DialogResult vẫn là None.</summary>
         private static bool BiHuyDong(Form f)
         {
             if (f.IsDisposed) return false;
@@ -110,7 +101,7 @@ namespace QuanLyDiemSinhVien.GUI
             FormTiepTheo = dich == typeof(fTrangChu) ? null : dich;
             hienTai.Close();
             if (BiHuyDong(hienTai))
-                FormTiepTheo = null; 
+                FormTiepTheo = null;   // form từ chối đóng (VD: còn điểm chưa lưu)
         }
     }
 }

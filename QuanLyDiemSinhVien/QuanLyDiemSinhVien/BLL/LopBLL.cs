@@ -27,6 +27,11 @@ namespace QuanLyDiemSinhVien.BLL
                 if (dal.GetById(lop.MaLop) != null) { loi = "Mã lớp đã tồn tại."; return false; }
                 lop.SiSo = 0;
             }
+            // Mã khoa phải có trong bảng Khoa
+            bool coKhoa = false;
+            foreach (System.Data.DataRow r in new DanhMucDAL().LayKhoa().Rows)
+                if (string.Equals(r["MaKhoa"].ToString(), lop.MaKhoa, System.StringComparison.OrdinalIgnoreCase)) coKhoa = true;
+            if (!coKhoa) { loi = "Mã khoa " + lop.MaKhoa + " không tồn tại."; return false; }
             loi = null;
             return true;
         }

@@ -30,17 +30,7 @@ namespace QuanLyDiemSinhVien.GUI
             this.hocKyMacDinh = hocKyMacDinh;
 
             Text = maLop == null ? "Thêm lớp học phần" : "Sửa lớp học phần";
-            Font = GiaoDien.FontThuong;
-            StartPosition = FormStartPosition.CenterParent;
-            FormBorderStyle = FormBorderStyle.FixedDialog;
-            MaximizeBox = false;
-            MinimizeBox = false;
-
-            if (btnLuu != null) btnLuu.Click += (s, e) => Luu();
-            if (btnHuy != null) btnHuy.Click += (s, e) => Close();
-            AcceptButton = btnLuu;
-            CancelButton = btnHuy;
-
+            btnHuy.Click += (s, e) => Close();
             Load += (s, e) => NapDuLieu();
         }
         private void NapDuLieu()
@@ -68,7 +58,7 @@ namespace QuanLyDiemSinhVien.GUI
                 if (maLopSua == null)
                 {
                     if (lopMacDinh != null) GiaoDien.ChonGiaTri(cboLop, lopMacDinh);
-                    if (hocKyMacDinh.HasValue && numHocKy != null) numHocKy.Value = hocKyMacDinh.Value;
+                    if (hocKyMacDinh.HasValue) numHocKy.Value = hocKyMacDinh.Value;
                     return;
                 }
 
@@ -79,7 +69,7 @@ namespace QuanLyDiemSinhVien.GUI
                 GiaoDien.ChonGiaTri(cboMonHoc, maMonSua);
                 cboLop.Enabled = false;
                 cboMonHoc.Enabled = false;
-                if (numHocKy != null) numHocKy.Value = Convert.ToInt32(r["HocKy"]);
+                numHocKy.Value = Convert.ToInt32(r["HocKy"]);
                 GiaoDien.ChonGiaTri(cboThu, r["ThuHoc"]);
                 GiaoDien.ChonGiaTri(cboCaHoc, r["CaHoc"]);
                 GiaoDien.ChonGiaTri(cboPhongHoc, r["MaPhong"]);
@@ -95,7 +85,7 @@ namespace QuanLyDiemSinhVien.GUI
             {
                 MaLop = GiaoDien.GiaTri(cboLop),
                 MaMon = GiaoDien.GiaTri(cboMonHoc),
-                HocKy = numHocKy != null ? (int)numHocKy.Value : 1,
+                HocKy = (int)numHocKy.Value,
                 ThuHoc = GiaoDien.GiaTriSo(cboThu) ?? 0,
                 CaHoc = GiaoDien.GiaTriSo(cboCaHoc) ?? 0,
                 MaPhong = GiaoDien.GiaTri(cboPhongHoc)

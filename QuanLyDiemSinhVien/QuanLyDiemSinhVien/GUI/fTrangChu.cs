@@ -1,4 +1,5 @@
 ﻿using QuanLyDiemSinhVien.BLL;
+using QuanLyDiemSinhVien.GUI;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,6 +19,34 @@ namespace QuanLyDiemSinhVien
         public fTrangChu()
         {
             InitializeComponent();
+            DieuHuong.GanMenu(this);   // gắn sự kiện cho các nút menu bên trái
+            LoadThongKe();
+            LoadBieuDo();
+        }
+
+        /// <summary>
+        /// Mở một chức năng từ menu. Form con muốn chuyển sang chức năng khác thì đặt
+        /// DieuHuong.FormTiepTheo rồi tự đóng; trang chủ mở tiếp form đó.
+        /// </summary>
+        public void MoChucNang(Type loaiForm)
+        {
+            if (loaiForm == null || loaiForm == typeof(fTrangChu)) return;
+
+            Type tiepTheo = loaiForm;
+            while (tiepTheo != null)
+            {
+                DieuHuong.FormTiepTheo = null;
+                using (Form f = (Form)Activator.CreateInstance(tiepTheo))
+                {
+                    f.ShowDialog(this);
+                }
+                if (DieuHuong.DangXuat)
+                {
+                    Close();
+                    return;
+                }
+                tiepTheo = DieuHuong.FormTiepTheo;
+            }
             LoadThongKe();
             LoadBieuDo();
         }
@@ -105,22 +134,17 @@ namespace QuanLyDiemSinhVien
 
         private void button2_Click(object sender, EventArgs e)
         {
-            using (fSinhVien form = new fSinhVien())
-            {
-                form.ShowDialog(this);
-            }
+            // Điều hướng do DieuHuong.GanMenu xử lý
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            fQuanLyDiem fQuanLyDiem = new fQuanLyDiem();
-            fQuanLyDiem.ShowDialog();
+            // Điều hướng do DieuHuong.GanMenu xử lý
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            fXemBangDiem fxembangdiem = new fXemBangDiem();
-            fxembangdiem.ShowDialog();
+            // Điều hướng do DieuHuong.GanMenu xử lý
         }
 
         private void fTrangChu_Load(object sender, EventArgs e)
@@ -130,8 +154,7 @@ namespace QuanLyDiemSinhVien
 
         private void button7_Click(object sender, EventArgs e)
         {
-            fThongKe fthongke = new fThongKe();
-            fthongke.ShowDialog();
+            // Điều hướng do DieuHuong.GanMenu xử lý
         }
     }
 }

@@ -1,16 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace QuanLyDiemSinhVien.GUI
 {
+    /// <summary>
+    /// Phân trang cho DataGridView bằng các nút "&lt;", "1".."5", "&gt;" đã thiết kế sẵn trên form.
+    /// Lưới luôn gắn với toàn bộ bảng dữ liệu, mỗi trang chỉ lọc (RowFilter) các dòng cần hiện,
+    /// nên dữ liệu sửa trên lưới (VD: nhập điểm) vẫn giữ nguyên khi chuyển trang.
+    /// </summary>
     internal class PhanTrang
     {
+        private const string COT_DONG = "__Dong";
         private readonly DataGridView dgv;
         private readonly Button nutTruoc;
         private readonly Button nutSau;
@@ -21,10 +22,6 @@ namespace QuanLyDiemSinhVien.GUI
 
         public int KichThuocTrang { get; set; }
         public int TrangHienTai { get; private set; }
-
-        public string[] Cot { get; set; }
-
-        public event EventHandler DaHienThi;
 
         public PhanTrang(DataGridView dgv, Button truoc, Button sau, Button[] so, Label thongTin,
                          string tenDoiTuong, int kichThuoc = 10)
@@ -45,11 +42,13 @@ namespace QuanLyDiemSinhVien.GUI
                 Button nut = b;
                 nut.Click += (s, e) =>
                 {
-                    int soTrangClick;
-                    if (int.TryParse(nut.Text, out soTrangClick)) DenTrang(soTrangClick);
+                    int trang;
+                    if (int.TryParse(nut.Text, out trang)) DenTrang(trang);
                 };
             }
         }
+
+        public DataTable DuLieu { get { return nguon; } }
 
         public int SoTrang
         {
@@ -60,42 +59,38 @@ namespace QuanLyDiemSinhVien.GUI
             }
         }
 
-        public void GanDuLieu(DataTable dt, bool giuTrang = false)
+        public void GanDuLieu(DataTable dt)
         {
             nguon = dt;
-            if (!giuTrang) TrangHienTai = 1;
-            DenTrang(TrangHienTai);
+            if (nguon != null)
+            {
+                if (!nguon.Columns.Contains(COT_DONG)) nguon.Columns.Add(COT_DONG, typeof(int));
+                for (int i = 0; i < nguon.Rows.Count; i++) nguon.Rows[i][COT_DONG] = i + 1;
+                nguon.AcceptChanges();
+            }
+            dgv.DataSource = nguon;
+            TrangHienTai = 1;
+            DenTrang(1);
         }
 
         public void DenTrang(int trang)
         {
             if (nguon == null) return;
+            dgv.EndEdit();
             trang = Math.Max(1, Math.Min(trang, SoTrang));
             TrangHienTai = trang;
 
-            DataTable trangDuLieu = nguon.Clone();
             int batDau = (trang - 1) * KichThuocTrang;
             int ketThuc = Math.Min(batDau + KichThuocTrang, nguon.Rows.Count);
-            for (int i = batDau; i < ketThuc; i++) trangDuLieu.ImportRow(nguon.Rows[i]);
+            nguon.DefaultView.RowFilter = string.Format("{0} > {1} AND {0} <= {2}", COT_DONG, batDau, ketThuc);
 
-            dgv.DataSource = trangDuLieu;
-            if (Cot != null) GiaoDien.HienCot(dgv, Cot);
-            CapNhatNut(batDau, ketThuc);
-            if (DaHienThi != null) DaHienThi(this, EventArgs.Empty);
-        }
-
-        private void CapNhatNut(int batDau, int ketThuc)
-        {
+            // Cập nhật số trên các nút trang
             int tong = SoTrang;
             int dau = Math.Max(1, Math.Min(TrangHienTai - nutSo.Length / 2, tong - nutSo.Length + 1));
             for (int i = 0; i < nutSo.Length; i++)
             {
-                int so = dau + i;
-                nutSo[i].Text = so.ToString();
-                nutSo[i].Visible = so <= tong;
-                bool dangChon = so == TrangHienTai;
-                nutSo[i].BackColor = dangChon ? GiaoDien.MauChinh : Color.White;
-                nutSo[i].ForeColor = dangChon ? Color.White : Color.Black;
+                nutSo[i].Text = (dau + i).ToString();
+                nutSo[i].Enabled = dau + i <= tong && dau + i != TrangHienTai;
             }
             if (nutTruoc != null) nutTruoc.Enabled = TrangHienTai > 1;
             if (nutSau != null) nutSau.Enabled = TrangHienTai < tong;

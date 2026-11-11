@@ -24,12 +24,13 @@ namespace QuanLyDiemSinhVien.DAL
             };
         }
 
-        public DataTable LayDanhSach(int? hocKy, string maLop, string maMon, string tuKhoa)
+        public DataTable LayDanhSach(int? hocKy, string maLop, string maMon, string tuKhoa, string maKhoa = null)
         {
             return DBConnection.LayBangProc("sp_TKB_LayDanhSach",
                 DBConnection.ThamSo("@HocKy", hocKy),
                 DBConnection.ThamSo("@MaLop", maLop),
                 DBConnection.ThamSo("@MaMon", maMon),
+                DBConnection.ThamSo("@MaKhoa", maKhoa),
                 DBConnection.ThamSo("@TuKhoa", tuKhoa));
         }
 

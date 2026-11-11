@@ -1,4 +1,4 @@
-/* =====================================================================
+﻿/* =====================================================================
    CƠ SỞ DỮ LIỆU QUẢN LÝ ĐIỂM SINH VIÊN - NHÓM 6
    Chạy toàn bộ file này trong SQL Server Management Studio (F5).
    Script có thể chạy lại nhiều lần: các bảng cũ sẽ bị xóa và tạo lại.
@@ -27,6 +27,13 @@ IF OBJECT_ID(N'DanToc', N'U') IS NOT NULL DROP TABLE DanToc;
 IF OBJECT_ID(N'ChucVu', N'U') IS NOT NULL DROP TABLE ChucVu;
 IF OBJECT_ID(N'MonHoc', N'U') IS NOT NULL DROP TABLE MonHoc;
 IF OBJECT_ID(N'Khoa', N'U') IS NOT NULL DROP TABLE Khoa;
+GO
+
+/* ---------- Xóa thủ tục / hàm cũ để chạy lại script không bị lỗi "đã tồn tại" ---------- */
+DECLARE @sql NVARCHAR(MAX) = N'';
+SELECT @sql = @sql + N'DROP PROCEDURE ' + QUOTENAME(name) + N';' FROM sys.procedures WHERE name LIKE 'sp[_]%';
+SELECT @sql = @sql + N'DROP FUNCTION ' + QUOTENAME(name) + N';' FROM sys.objects WHERE name = 'fn_XepLoai';
+EXEC sp_executesql @sql;
 GO
 
 /* ============================ BẢNG ============================ */
@@ -241,7 +248,8 @@ BEGIN
       AND (@MaLop IS NULL OR sv.MaLop = @MaLop)
       AND (@MaChuyenNganh IS NULL OR sv.MaChuyenNganh = @MaChuyenNganh)
       AND (@MaQue IS NULL OR sv.MaQue = @MaQue)
-      AND (@TuKhoa IS NULL OR sv.MaSV LIKE '%' + @TuKhoa + '%' OR sv.TenSV LIKE N'%' + @TuKhoa + N'%')
+      AND (@TuKhoa IS NULL OR sv.MaSV LIKE '%' + @TuKhoa + '%' OR sv.TenSV LIKE N'%' + @TuKhoa + N'%'
+           OR q.TenQue LIKE N'%' + @TuKhoa + N'%')   -- gõ tên quê vào ô tìm kiếm cũng tìm được
     ORDER BY sv.MaLop, sv.MaSV;
 END
 GO
@@ -386,6 +394,7 @@ GO
 /* ===================== THỦ TỤC: THỜI KHÓA BIỂU (LỚP HỌC PHẦN) ===================== */
 CREATE PROCEDURE sp_TKB_LayDanhSach
     @HocKy INT = NULL, @MaLop VARCHAR(10) = NULL, @MaMon VARCHAR(10) = NULL,
+    @MaKhoa VARCHAR(10) = NULL,
     @TuKhoa NVARCHAR(100) = NULL
 AS
 BEGIN
@@ -401,6 +410,7 @@ BEGIN
     WHERE (@HocKy IS NULL OR t.HocKy = @HocKy)
       AND (@MaLop IS NULL OR t.MaLop = @MaLop)
       AND (@MaMon IS NULL OR t.MaMon = @MaMon)
+      AND (@MaKhoa IS NULL OR l.MaKhoa = @MaKhoa)
       AND (@TuKhoa IS NULL OR m.TenMon LIKE N'%' + @TuKhoa + N'%' OR t.MaMon LIKE '%' + @TuKhoa + '%'
            OR l.TenLop LIKE N'%' + @TuKhoa + N'%')
     ORDER BY t.HocKy, t.MaLop, t.ThuHoc, t.CaHoc;

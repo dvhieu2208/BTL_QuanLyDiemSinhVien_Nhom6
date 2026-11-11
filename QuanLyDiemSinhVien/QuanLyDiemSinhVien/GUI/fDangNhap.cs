@@ -104,9 +104,13 @@ namespace QuanLyDiemSinhVien
 
         private void lkQuenMatKhau_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            fQuenMatKhau quenMatKhau = new fQuenMatKhau();
-            quenMatKhau.ShowDialog();
-            this.Hide();
+            using (fQuenMatKhau quenMatKhau = new fQuenMatKhau())
+            {
+                quenMatKhau.TenDangNhapBanDau = txtTenDangNhap.Text.Trim();
+                quenMatKhau.ShowDialog(this);
+            }
+            txtMatKhau.Clear();
+            txtMatKhau.Focus();
         }
     }
 }

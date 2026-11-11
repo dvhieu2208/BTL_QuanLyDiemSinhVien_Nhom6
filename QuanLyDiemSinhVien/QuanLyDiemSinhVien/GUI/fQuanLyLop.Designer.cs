@@ -47,6 +47,11 @@
             this.txtMaLop = new System.Windows.Forms.TextBox();
             this.button6 = new System.Windows.Forms.Button();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
+            this.colSiSo = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhoaHoc = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colKhoa = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaLop = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.txtTimKiem = new System.Windows.Forms.TextBox();
@@ -306,7 +311,19 @@
             // dgvDanhSach
             // 
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.colMaLop,
+            this.colTenLop,
+            this.colKhoa,
+            this.colKhoaHoc,
+            this.colSiSo});
             this.dgvDanhSach.Location = new System.Drawing.Point(628, 173);
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvDanhSach.MultiSelect = false;
+            this.dgvDanhSach.ReadOnly = true;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
@@ -342,6 +359,7 @@
             // 
             this.cboKhoa.FormattingEnabled = true;
             this.cboKhoa.Location = new System.Drawing.Point(756, 107);
+            this.cboKhoa.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboKhoa.Name = "cboKhoa";
             this.cboKhoa.Size = new System.Drawing.Size(247, 30);
             this.cboKhoa.TabIndex = 4;
@@ -471,6 +489,51 @@
             this.btnQuanLyLop.UseVisualStyleBackColor = true;
             this.btnQuanLyLop.Click += new System.EventHandler(this.button12_Click);
             // 
+            // colMaLop
+            // 
+            this.colMaLop.DataPropertyName = "MaLop";
+            this.colMaLop.HeaderText = "Mã lớp";
+            this.colMaLop.MinimumWidth = 6;
+            this.colMaLop.Name = "colMaLop";
+            this.colMaLop.ReadOnly = true;
+            this.colMaLop.FillWeight = 70F;
+            // 
+            // colTenLop
+            // 
+            this.colTenLop.DataPropertyName = "TenLop";
+            this.colTenLop.HeaderText = "Tên lớp";
+            this.colTenLop.MinimumWidth = 6;
+            this.colTenLop.Name = "colTenLop";
+            this.colTenLop.ReadOnly = true;
+            this.colTenLop.FillWeight = 170F;
+            // 
+            // colKhoa
+            // 
+            this.colKhoa.DataPropertyName = "TenKhoa";
+            this.colKhoa.HeaderText = "Khoa";
+            this.colKhoa.MinimumWidth = 6;
+            this.colKhoa.Name = "colKhoa";
+            this.colKhoa.ReadOnly = true;
+            this.colKhoa.FillWeight = 140F;
+            // 
+            // colKhoaHoc
+            // 
+            this.colKhoaHoc.DataPropertyName = "KhoaHoc";
+            this.colKhoaHoc.HeaderText = "Khóa học";
+            this.colKhoaHoc.MinimumWidth = 6;
+            this.colKhoaHoc.Name = "colKhoaHoc";
+            this.colKhoaHoc.ReadOnly = true;
+            this.colKhoaHoc.FillWeight = 70F;
+            // 
+            // colSiSo
+            // 
+            this.colSiSo.DataPropertyName = "SiSo";
+            this.colSiSo.HeaderText = "Sĩ số";
+            this.colSiSo.MinimumWidth = 6;
+            this.colSiSo.Name = "colSiSo";
+            this.colSiSo.ReadOnly = true;
+            this.colSiSo.FillWeight = 50F;
+            // 
             // fQuanLyLop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 22F);
@@ -536,5 +599,10 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Button btnQuanLyLop;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colMaLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colTenLop;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKhoa;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colKhoaHoc;
+        private System.Windows.Forms.DataGridViewTextBoxColumn colSiSo;
     }
 }
