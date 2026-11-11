@@ -1,41 +1,27 @@
 ﻿using QuanLyDiemSinhVien.DAL;
+using QuanLyDiemSinhVien.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data;
 
 
 namespace QuanLyDiemSinhVien.BLL
 {
-    internal class TrangChuBLL
+    internal class TrangChuBLL : IThongKe
     {
-        private TrangChuDAL dal = new TrangChuDAL();
+        private readonly TrangChuDAL dal = new TrangChuDAL();
 
-        public int GetTongSinhVien()
-        {
-            return dal.GetTongSinhVien();
-        }
+        public int TongSinhVien() { return dal.GetTongSinhVien(); }
+        public int TongLop() { return dal.GetTongLop(); }
+        public int TongMonHoc() { return dal.GetTongMonHoc(); }
 
-        public int GetTongLop()
-        {
-            return dal.GetTongLop();
-        }
-
-        public int GetTongMonHoc()
-        {
-            return dal.GetTongMonHoc();
-        }
-
-        public decimal GetTyLeDat()
-        {
-            return dal.GetTyLeDat();
-        }
-
-        public DataTable GetThongKeKetQua()
-        {
-            return dal.GetThongKeKetQua();
-        }
+        public int GetTongSinhVien() { return TongSinhVien(); }
+        public int GetTongLop() { return TongLop(); }
+        public int GetTongMonHoc() { return TongMonHoc(); }
+        public decimal GetTyLeDat() { return dal.GetTyLeDat(); }
+        public DataTable GetThongKeKetQua() { return dal.GetThongKeKetQua(); }
     }
 }

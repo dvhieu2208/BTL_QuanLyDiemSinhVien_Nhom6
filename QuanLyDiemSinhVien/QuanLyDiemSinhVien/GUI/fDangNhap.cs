@@ -19,6 +19,7 @@ namespace QuanLyDiemSinhVien
         public fDangNhap()
         {
             InitializeComponent();
+            this.AcceptButton = btnDangNhap;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -42,13 +43,37 @@ namespace QuanLyDiemSinhVien
                 return;
             }
 
-            bool kq = bll.DangNhap(taiKhoan, matKhau);
+            bool kq;
+            try
+            {
+                kq = bll.DangNhap(taiKhoan, matKhau);
+            }
+            catch (Exception ex)
+            {
+                GiaoDien.Loi(ex);
+                return;
+            }
+
             if (kq)
             {
-                fTrangChu trangChu = new fTrangChu();
+                DieuHuong.DangXuat = false;
                 this.Hide();
-                trangChu.ShowDialog();
-                this.Close();
+                using (fTrangChu trangChu = new fTrangChu())
+                {
+                    trangChu.ShowDialog();
+                }
+
+                if (DieuHuong.DangXuat)
+                {
+                    DieuHuong.DangXuat = false;
+                    txtMatKhau.Clear();
+                    this.Show();
+                    txtMatKhau.Focus();
+                }
+                else
+                {
+                    this.Close();
+                }
             }
             else
             {

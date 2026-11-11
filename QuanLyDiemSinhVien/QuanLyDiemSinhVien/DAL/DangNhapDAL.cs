@@ -12,28 +12,34 @@ namespace QuanLyDiemSinhVien.DAL
     {
         public string LayMatKhau(string taiKhoan)
         {
-            using (SqlConnection conn = DBConnection.GetConnection())
-            {
-                conn.Open();
+            object kq = DBConnection.LayGiaTri(
+                "SELECT MatKhau FROM TaiKhoan WHERE TenDangNhap = @TaiKhoan AND TrangThai = 1",
+                new SqlParameter("@TaiKhoan", SqlDbType.VarChar, 50) { Value = taiKhoan });
+            return kq == null ? null : kq.ToString();
+        }
 
-                string query = @"
-                    SELECT MatKhau
-                    FROM TaiKhoan
-                    WHERE TenDangNhap = @TaiKhoan";
+        public string LayCauHoiBaoMat(string taiKhoan)
+        {
+            object kq = DBConnection.LayGiaTri(
+                "SELECT CauHoiBaoMat FROM TaiKhoan WHERE TenDangNhap = @TaiKhoan",
+                new SqlParameter("@TaiKhoan", SqlDbType.VarChar, 50) { Value = taiKhoan });
+            return kq == null ? null : kq.ToString();
+        }
 
-                using (SqlCommand cmd = new SqlCommand(query, conn))
-                {
-                    cmd.Parameters.Add("@TaiKhoan",
-                        System.Data.SqlDbType.NVarChar, 100).Value = taiKhoan;
+        public string LayDapAnBaoMat(string taiKhoan)
+        {
+            object kq = DBConnection.LayGiaTri(
+                "SELECT DapAnBaoMat FROM TaiKhoan WHERE TenDangNhap = @TaiKhoan",
+                new SqlParameter("@TaiKhoan", SqlDbType.VarChar, 50) { Value = taiKhoan });
+            return kq == null ? null : kq.ToString();
+        }
 
-                    object result = cmd.ExecuteScalar();
-
-                    if (result == null || result == DBNull.Value)
-                        return null;
-
-                    return result.ToString();
-                }
-            }
+        public bool DoiMatKhau(string taiKhoan, string matKhauDaBam)
+        {
+            return DBConnection.ThucThi(
+                "UPDATE TaiKhoan SET MatKhau = @MatKhau WHERE TenDangNhap = @TaiKhoan",
+                new SqlParameter("@MatKhau", matKhauDaBam),
+                new SqlParameter("@TaiKhoan", SqlDbType.VarChar, 50) { Value = taiKhoan });
         }
     }
 }

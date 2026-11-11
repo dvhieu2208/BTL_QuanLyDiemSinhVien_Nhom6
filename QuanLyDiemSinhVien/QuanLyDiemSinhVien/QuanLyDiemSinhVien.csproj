@@ -33,6 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.CrystalReports.Engine.1.0.0\lib\CrystalDecisions.CrystalReports.Engine.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.ReportSource.1.0.0\lib\CrystalDecisions.ReportSource.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Shared.1.0.0\lib\CrystalDecisions.Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL">
+      <HintPath>..\packages\CrystalDecisions.Windows.Forms.1.0.0\lib\CrystalDecisions.Windows.Forms.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=16.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Office.Interop.Excel.16.0.18925.20022\lib\net40\Microsoft.Office.Interop.Excel.dll</HintPath>
       <EmbedInteropTypes>True</EmbedInteropTypes>
@@ -55,30 +67,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL\BaoCaoBLL.cs" />
     <Compile Include="BLL\DangNhapBLL.cs" />
+    <Compile Include="BLL\DanhMucBLL.cs" />
+    <Compile Include="BLL\DiemBLL.cs" />
+    <Compile Include="BLL\LopBLL.cs" />
     <Compile Include="BLL\MatKhauHash.cs" />
+    <Compile Include="BLL\MonHocBLL.cs" />
+    <Compile Include="BLL\QuanLyCoBanBLL.cs" />
+    <Compile Include="BLL\SinhVienBLL.cs" />
+    <Compile Include="BLL\ThoiKhoaBieuBLL.cs" />
     <Compile Include="BLL\TrangChuBLL.cs" />
+    <Compile Include="DAL\BaoCaoDAL.cs" />
     <Compile Include="DAL\DangNhapDAL.cs" />
+    <Compile Include="DAL\DanhMucDAL.cs" />
     <Compile Include="DAL\DBConnection.cs" />
+    <Compile Include="DAL\DiemDAL.cs" />
+    <Compile Include="DAL\LopDAL.cs" />
+    <Compile Include="DAL\MonHocDAL.cs" />
     <Compile Include="DAL\SinhVienDAL.cs" />
+    <Compile Include="DAL\ThoiKhoaBieuDAL.cs" />
     <Compile Include="DAL\TrangChuDAL.cs" />
+    <Compile Include="DTO\BangDiem.cs" />
     <Compile Include="DTO\Diem.cs" />
     <Compile Include="DTO\Khoa.cs" />
+    <Compile Include="DTO\LichHoc.cs" />
     <Compile Include="DTO\Lop.cs" />
     <Compile Include="DTO\MonHoc.cs" />
     <Compile Include="DTO\Nguoi.cs" />
     <Compile Include="DTO\SinhVien.cs" />
+    <Compile Include="GUI\DieuHuong.cs" />
+    <Compile Include="GUI\fBaoCao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fBaoCao.Designer.cs">
+      <DependentUpon>fBaoCao.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fDangNhap.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fDangNhap.Designer.cs">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fLopHocPhanChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fLopHocPhanChiTiet.Designer.cs">
+      <DependentUpon>fLopHocPhanChiTiet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fMonHocChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fMonHocChiTiet.Designer.cs">
+      <DependentUpon>fMonHocChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fQuanLyDiem.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="GUI\fQuanLyDiem.Designer.cs">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI\fQuanLyLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fQuanLyLop.Designer.cs">
+      <DependentUpon>fQuanLyLop.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI\fQuanLyLopHocPhan.cs">
       <SubType>Form</SubType>
@@ -104,6 +157,12 @@
     <Compile Include="GUI\fSinhVien.Designer.cs">
       <DependentUpon>fSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\fSinhVienChiTiet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI\fSinhVienChiTiet.Designer.cs">
+      <DependentUpon>fSinhVienChiTiet.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI\fThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -122,6 +181,8 @@
     <Compile Include="GUI\fXemBangDiem.Designer.cs">
       <DependentUpon>fXemBangDiem.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI\GiaoDien.cs" />
+    <Compile Include="GUI\PhanTrang.cs" />
     <Compile Include="Interfaces\IKiemTraHopLe.cs" />
     <Compile Include="Interfaces\IRepository.cs" />
     <Compile Include="Interfaces\IThongKe.cs" />
@@ -133,8 +194,17 @@
     <EmbeddedResource Include="GUI\fDangNhap.resx">
       <DependentUpon>fDangNhap.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fLopHocPhanChiTiet.resx">
+      <DependentUpon>fLopHocPhanChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fMonHocChiTiet.resx">
+      <DependentUpon>fMonHocChiTiet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI\fQuanLyDiem.resx">
       <DependentUpon>fQuanLyDiem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fQuanLyLop.resx">
+      <DependentUpon>fQuanLyLop.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fQuanLyLopHocPhan.resx">
       <DependentUpon>fQuanLyLopHocPhan.cs</DependentUpon>
@@ -148,6 +218,9 @@
     <EmbeddedResource Include="GUI\fSinhVien.resx">
       <DependentUpon>fSinhVien.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI\fSinhVienChiTiet.resx">
+      <DependentUpon>fSinhVienChiTiet.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI\fThongKe.resx">
       <DependentUpon>fThongKe.cs</DependentUpon>
@@ -177,6 +250,15 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="Reports\DsBaoCao.xsc">
+      <DependentUpon>DsBaoCao.xsd</DependentUpon>
+    </None>
+    <None Include="Reports\DsBaoCao.xsd">
+      <SubType>Form</SubType>
+    </None>
+    <None Include="Reports\DsBaoCao.xss">
+      <DependentUpon>DsBaoCao.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

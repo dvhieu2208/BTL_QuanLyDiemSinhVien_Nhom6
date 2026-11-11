@@ -18,16 +18,25 @@ namespace QuanLyDiemSinhVien.DTO
 
         public string XepLoai()
         {
-            if (DiemSo >= 9) return "Xuất sắc";
-            if (DiemSo >= 8) return "Giỏi";
-            if (DiemSo >= 7) return "Khá";
-            if (DiemSo >= 5) return "Trung bình";
-            return "Yếu";
+            return XepLoaiTheoDiem(DiemSo);
+        }
+        public static string XepLoaiTheoDiem(decimal d)
+        {
+            if (d >= 9) return "Xuất sắc";
+            if (d >= 8) return "Giỏi";
+            if (d >= 7) return "Khá";
+            if (d >= 5) return "Trung bình";
+            if (d >= 4) return "Yếu";
+            return "Kém";
         }
 
         public bool KiemTra(out string loi)
         {
+            if (string.IsNullOrWhiteSpace(MaSV) || string.IsNullOrWhiteSpace(MaLop) || string.IsNullOrWhiteSpace(MaMon))
+            { loi = "Thiếu mã sinh viên / lớp / môn"; return false; }
             if (DiemSo < 0 || DiemSo > 10) { loi = "Điểm phải từ 0 đến 10"; return false; }
+            if (HocKy < 1) { loi = "Học kỳ không hợp lệ"; return false; }
+            if (LanThi < 1 || LanThi > 3) { loi = "Lần thi phải từ 1 đến 3"; return false; }
             loi = null; return true;
         }
     }
