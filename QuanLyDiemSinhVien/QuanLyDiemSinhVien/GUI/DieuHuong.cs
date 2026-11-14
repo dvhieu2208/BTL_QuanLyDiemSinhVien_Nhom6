@@ -11,7 +11,6 @@ namespace QuanLyDiemSinhVien.GUI
     /// </summary>
     internal static class DieuHuong
     {
-        /// <summary>Form cần mở tiếp theo sau khi form hiện tại đóng.</summary>
         public static Type FormTiepTheo { get; set; }
         public static bool DangXuat { get; set; }
 
@@ -45,7 +44,6 @@ namespace QuanLyDiemSinhVien.GUI
 
         public static void GanMenu(Form form)
         {
-            // Thanh menu = khung chứa nút "Đăng xuất"
             Button nutDangXuat = TatCa(form).OfType<Button>().FirstOrDefault(b => b.Text.Trim() == "Đăng xuất");
             Control menu = nutDangXuat != null && nutDangXuat.Parent != null ? nutDangXuat.Parent : form;
 
@@ -60,7 +58,6 @@ namespace QuanLyDiemSinhVien.GUI
                 nut.Click += (s, e) => ChuyenDen(form, dichCuoi, dangXuatCuoi);
             }
 
-            // Hiện tên người dùng ở khung thông tin tài khoản (các nhãn "labelX" chưa đặt chữ)
             var nhan = TatCa(menu).OfType<Label>()
                                   .Where(l => l.Text.StartsWith("label"))
                                   .OrderBy(l => l.Top).ToList();
@@ -71,7 +68,6 @@ namespace QuanLyDiemSinhVien.GUI
             }
         }
 
-        /// <summary>Form hộp thoại (ShowDialog) bị hủy đóng thì DialogResult vẫn là None.</summary>
         private static bool BiHuyDong(Form f)
         {
             if (f.IsDisposed) return false;

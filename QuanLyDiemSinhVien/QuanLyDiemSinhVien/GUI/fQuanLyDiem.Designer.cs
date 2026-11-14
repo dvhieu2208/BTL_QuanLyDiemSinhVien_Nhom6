@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fQuanLyDiem));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -39,12 +41,6 @@
             this.cboLop = new System.Windows.Forms.ComboBox();
             this.cboHocKy = new System.Windows.Forms.ComboBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.colXepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnTimKiem = new System.Windows.Forms.Button();
             this.btnIn = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -69,6 +65,12 @@
             this.cboMonHoc = new System.Windows.Forms.ComboBox();
             this.cboLanThi = new System.Windows.Forms.ComboBox();
             this.lblThongTin = new System.Windows.Forms.Label();
+            this.colSTT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colNgaySinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colXepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDanhSach)).BeginInit();
@@ -158,26 +160,29 @@
             // 
             // cboLop
             // 
+            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.FormattingEnabled = true;
             this.cboLop.Location = new System.Drawing.Point(213, 187);
             this.cboLop.Margin = new System.Windows.Forms.Padding(4);
-            this.cboLop.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLop.Name = "cboLop";
             this.cboLop.Size = new System.Drawing.Size(140, 30);
             this.cboLop.TabIndex = 5;
             // 
             // cboHocKy
             // 
+            this.cboHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHocKy.FormattingEnabled = true;
             this.cboHocKy.Location = new System.Drawing.Point(396, 187);
             this.cboHocKy.Margin = new System.Windows.Forms.Padding(4);
-            this.cboHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(117, 30);
             this.cboHocKy.TabIndex = 6;
             // 
             // dgvDanhSach
             // 
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -189,15 +194,11 @@
             this.colXepLoai});
             this.dgvDanhSach.Location = new System.Drawing.Point(211, 247);
             this.dgvDanhSach.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvDanhSach.AllowUserToAddRows = false;
-            this.dgvDanhSach.AllowUserToDeleteRows = false;
-            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.MultiSelect = false;
-            this.dgvDanhSach.ReadOnly = false;
-            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(1107, 456);
             this.dgvDanhSach.TabIndex = 7;
             this.dgvDanhSach.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
@@ -460,20 +461,20 @@
             // 
             // cboMonHoc
             // 
+            this.cboMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMonHoc.FormattingEnabled = true;
             this.cboMonHoc.Location = new System.Drawing.Point(571, 187);
             this.cboMonHoc.Margin = new System.Windows.Forms.Padding(4);
-            this.cboMonHoc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboMonHoc.Name = "cboMonHoc";
             this.cboMonHoc.Size = new System.Drawing.Size(243, 30);
             this.cboMonHoc.TabIndex = 6;
             // 
             // cboLanThi
             // 
+            this.cboLanThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanThi.FormattingEnabled = true;
             this.cboLanThi.Location = new System.Drawing.Point(836, 187);
             this.cboLanThi.Margin = new System.Windows.Forms.Padding(4);
-            this.cboLanThi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboLanThi.Name = "cboLanThi";
             this.cboLanThi.Size = new System.Drawing.Size(117, 30);
             this.cboLanThi.TabIndex = 6;
@@ -490,58 +491,59 @@
             // colSTT
             // 
             this.colSTT.DataPropertyName = "STT";
+            this.colSTT.FillWeight = 30F;
             this.colSTT.HeaderText = "STT";
             this.colSTT.MinimumWidth = 6;
             this.colSTT.Name = "colSTT";
             this.colSTT.ReadOnly = true;
-            this.colSTT.FillWeight = 30F;
             // 
             // colMaSV
             // 
             this.colMaSV.DataPropertyName = "MaSV";
+            this.colMaSV.FillWeight = 70F;
             this.colMaSV.HeaderText = "Mã SV";
             this.colMaSV.MinimumWidth = 6;
             this.colMaSV.Name = "colMaSV";
             this.colMaSV.ReadOnly = true;
-            this.colMaSV.FillWeight = 70F;
             // 
             // colTenSV
             // 
             this.colTenSV.DataPropertyName = "TenSV";
+            this.colTenSV.FillWeight = 160F;
             this.colTenSV.HeaderText = "Họ và tên";
             this.colTenSV.MinimumWidth = 6;
             this.colTenSV.Name = "colTenSV";
             this.colTenSV.ReadOnly = true;
-            this.colTenSV.FillWeight = 160F;
             // 
             // colNgaySinh
             // 
             this.colNgaySinh.DataPropertyName = "NgaySinh";
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
+            this.colNgaySinh.FillWeight = 80F;
             this.colNgaySinh.HeaderText = "Ngày sinh";
             this.colNgaySinh.MinimumWidth = 6;
-            this.colNgaySinh.DefaultCellStyle.Format = "dd/MM/yyyy";
             this.colNgaySinh.Name = "colNgaySinh";
             this.colNgaySinh.ReadOnly = true;
-            this.colNgaySinh.FillWeight = 80F;
             // 
             // colDiem
             // 
             this.colDiem.DataPropertyName = "Diem";
-            this.colDiem.HeaderText = "Điểm (nhập)";
-            this.colDiem.MinimumWidth = 6;
-            this.colDiem.DefaultCellStyle.BackColor = System.Drawing.Color.LightYellow;
-            this.colDiem.Name = "colDiem";
-            this.colDiem.ReadOnly = false;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightYellow;
+            this.colDiem.DefaultCellStyle = dataGridViewCellStyle2;
             this.colDiem.FillWeight = 60F;
+            this.colDiem.HeaderText = "Điểm";
+            this.colDiem.MinimumWidth = 6;
+            this.colDiem.Name = "colDiem";
             // 
             // colXepLoai
             // 
             this.colXepLoai.DataPropertyName = "XepLoai";
+            this.colXepLoai.FillWeight = 70F;
             this.colXepLoai.HeaderText = "Xếp loại";
             this.colXepLoai.MinimumWidth = 6;
             this.colXepLoai.Name = "colXepLoai";
             this.colXepLoai.ReadOnly = true;
-            this.colXepLoai.FillWeight = 70F;
             // 
             // fQuanLyDiem
             // 

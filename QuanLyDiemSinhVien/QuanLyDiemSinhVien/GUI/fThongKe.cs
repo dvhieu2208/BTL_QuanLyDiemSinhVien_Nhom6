@@ -8,11 +8,7 @@ using QuanLyDiemSinhVien.GUI;
 
 namespace QuanLyDiemSinhVien
 {
-    /// <summary>
-    /// Thống kê: chọn cboLoaiBaoCao rồi bấm btnThongKe để vẽ chart1;
-    /// dgvDanhSach hiện sĩ số sinh viên theo khoa / lớp.
-    /// (Dữ liệu điểm không lưu ngày nên 2 ô Từ ngày / Đến ngày không dùng để lọc.)
-    /// </summary>
+
     public partial class fThongKe : Form
     {
         private readonly BaoCaoBLL bll = new BaoCaoBLL();
@@ -35,7 +31,7 @@ namespace QuanLyDiemSinhVien
                 if (cboLoaiBaoCao.Items.Count == 0)
                     cboLoaiBaoCao.Items.AddRange(new object[] { TK_XEPLOAI, TK_DIEMTB });
                 dgvDanhSach.DataSource = bll.ThongKeSVTheoKhoa();
-                cboLoaiBaoCao.SelectedIndex = 0;   // tự vẽ biểu đồ lần đầu
+                cboLoaiBaoCao.SelectedIndex = 0;
             }
             catch (Exception ex)
             {
@@ -64,7 +60,6 @@ namespace QuanLyDiemSinhVien
             }
         }
 
-        /// <summary>Đổ số lượt thi theo xếp loại vào biểu đồ cột.</summary>
         private void VeXepLoai(DataTable dt)
         {
             chart1.Series.Clear();
@@ -79,7 +74,6 @@ namespace QuanLyDiemSinhVien
             chart1.Series.Add(s);
         }
 
-        /// <summary>Đổ điểm trung bình từng môn vào biểu đồ thanh ngang.</summary>
         private void VeDiemTrungBinh(DataTable dt)
         {
             chart1.Series.Clear();
@@ -95,13 +89,11 @@ namespace QuanLyDiemSinhVien
             chart1.Series.Add(s);
         }
 
-        // Nút "Thống kê" (sự kiện đã gắn trong Designer)
         private void button10_Click(object sender, EventArgs e)
         {
             ThongKe();
         }
 
-        // ---- Các hàm sự kiện do Designer tạo sẵn ----
         private void button2_Click(object sender, EventArgs e) { }
         private void panel1_Paint(object sender, PaintEventArgs e) { }
         private void label4_Click(object sender, EventArgs e) { }

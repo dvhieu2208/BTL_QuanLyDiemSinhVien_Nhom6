@@ -65,17 +65,18 @@
             this.label15 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
-            this.colXepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colLanThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colDVHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.colMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colHocKy = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colMaMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colTenMon = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDVHT = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colLanThi = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colDiem = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.colXepLoai = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel3 = new System.Windows.Forms.Panel();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.button6 = new System.Windows.Forms.Button();
+            this.btnQuanLyLop = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel2.SuspendLayout();
@@ -142,6 +143,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.RoyalBlue;
             this.panel2.Controls.Add(this.btnXemBangDiem);
+            this.panel2.Controls.Add(this.btnQuanLyLop);
             this.panel2.Controls.Add(this.button7);
             this.panel2.Controls.Add(this.button5);
             this.panel2.Controls.Add(this.button4);
@@ -296,11 +298,11 @@
             // 
             // cboHocKy
             // 
+            this.cboHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHocKy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cboHocKy.FormattingEnabled = true;
             this.cboHocKy.Location = new System.Drawing.Point(4, 45);
             this.cboHocKy.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.cboHocKy.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboHocKy.Name = "cboHocKy";
             this.cboHocKy.Size = new System.Drawing.Size(135, 28);
             this.cboHocKy.TabIndex = 8;
@@ -532,6 +534,9 @@
             // 
             // dgvDanhSach
             // 
+            this.dgvDanhSach.AllowUserToAddRows = false;
+            this.dgvDanhSach.AllowUserToDeleteRows = false;
+            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSach.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.colHocKy,
@@ -542,17 +547,77 @@
             this.colDiem,
             this.colXepLoai});
             this.dgvDanhSach.Location = new System.Drawing.Point(256, 388);
-            this.dgvDanhSach.AllowUserToAddRows = false;
-            this.dgvDanhSach.AllowUserToDeleteRows = false;
-            this.dgvDanhSach.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvDanhSach.MultiSelect = false;
-            this.dgvDanhSach.ReadOnly = true;
-            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Name = "dgvDanhSach";
+            this.dgvDanhSach.ReadOnly = true;
             this.dgvDanhSach.RowHeadersWidth = 51;
             this.dgvDanhSach.RowTemplate.Height = 24;
+            this.dgvDanhSach.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSach.Size = new System.Drawing.Size(1060, 362);
             this.dgvDanhSach.TabIndex = 18;
+            // 
+            // colHocKy
+            // 
+            this.colHocKy.DataPropertyName = "HocKy";
+            this.colHocKy.FillWeight = 50F;
+            this.colHocKy.HeaderText = "Học kỳ";
+            this.colHocKy.MinimumWidth = 6;
+            this.colHocKy.Name = "colHocKy";
+            this.colHocKy.ReadOnly = true;
+            // 
+            // colMaMon
+            // 
+            this.colMaMon.DataPropertyName = "MaMon";
+            this.colMaMon.FillWeight = 60F;
+            this.colMaMon.HeaderText = "Mã môn";
+            this.colMaMon.MinimumWidth = 6;
+            this.colMaMon.Name = "colMaMon";
+            this.colMaMon.ReadOnly = true;
+            // 
+            // colTenMon
+            // 
+            this.colTenMon.DataPropertyName = "TenMon";
+            this.colTenMon.FillWeight = 200F;
+            this.colTenMon.HeaderText = "Tên môn học";
+            this.colTenMon.MinimumWidth = 6;
+            this.colTenMon.Name = "colTenMon";
+            this.colTenMon.ReadOnly = true;
+            // 
+            // colDVHT
+            // 
+            this.colDVHT.DataPropertyName = "DVHT";
+            this.colDVHT.FillWeight = 45F;
+            this.colDVHT.HeaderText = "ĐVHT";
+            this.colDVHT.MinimumWidth = 6;
+            this.colDVHT.Name = "colDVHT";
+            this.colDVHT.ReadOnly = true;
+            // 
+            // colLanThi
+            // 
+            this.colLanThi.DataPropertyName = "LanThi";
+            this.colLanThi.FillWeight = 50F;
+            this.colLanThi.HeaderText = "Lần thi";
+            this.colLanThi.MinimumWidth = 6;
+            this.colLanThi.Name = "colLanThi";
+            this.colLanThi.ReadOnly = true;
+            // 
+            // colDiem
+            // 
+            this.colDiem.DataPropertyName = "Diem";
+            this.colDiem.FillWeight = 50F;
+            this.colDiem.HeaderText = "Điểm";
+            this.colDiem.MinimumWidth = 6;
+            this.colDiem.Name = "colDiem";
+            this.colDiem.ReadOnly = true;
+            // 
+            // colXepLoai
+            // 
+            this.colXepLoai.DataPropertyName = "XepLoai";
+            this.colXepLoai.FillWeight = 70F;
+            this.colXepLoai.HeaderText = "Xếp loại";
+            this.colXepLoai.MinimumWidth = 6;
+            this.colXepLoai.Name = "colXepLoai";
+            this.colXepLoai.ReadOnly = true;
             // 
             // panel3
             // 
@@ -596,68 +661,19 @@
             this.button6.Text = "In";
             this.button6.UseVisualStyleBackColor = false;
             // 
-            // colHocKy
+            // btnQuanLyLop
             // 
-            this.colHocKy.DataPropertyName = "HocKy";
-            this.colHocKy.HeaderText = "Học kỳ";
-            this.colHocKy.MinimumWidth = 6;
-            this.colHocKy.Name = "colHocKy";
-            this.colHocKy.ReadOnly = true;
-            this.colHocKy.FillWeight = 50F;
-            // 
-            // colMaMon
-            // 
-            this.colMaMon.DataPropertyName = "MaMon";
-            this.colMaMon.HeaderText = "Mã môn";
-            this.colMaMon.MinimumWidth = 6;
-            this.colMaMon.Name = "colMaMon";
-            this.colMaMon.ReadOnly = true;
-            this.colMaMon.FillWeight = 60F;
-            // 
-            // colTenMon
-            // 
-            this.colTenMon.DataPropertyName = "TenMon";
-            this.colTenMon.HeaderText = "Tên môn học";
-            this.colTenMon.MinimumWidth = 6;
-            this.colTenMon.Name = "colTenMon";
-            this.colTenMon.ReadOnly = true;
-            this.colTenMon.FillWeight = 200F;
-            // 
-            // colDVHT
-            // 
-            this.colDVHT.DataPropertyName = "DVHT";
-            this.colDVHT.HeaderText = "ĐVHT";
-            this.colDVHT.MinimumWidth = 6;
-            this.colDVHT.Name = "colDVHT";
-            this.colDVHT.ReadOnly = true;
-            this.colDVHT.FillWeight = 45F;
-            // 
-            // colLanThi
-            // 
-            this.colLanThi.DataPropertyName = "LanThi";
-            this.colLanThi.HeaderText = "Lần thi";
-            this.colLanThi.MinimumWidth = 6;
-            this.colLanThi.Name = "colLanThi";
-            this.colLanThi.ReadOnly = true;
-            this.colLanThi.FillWeight = 50F;
-            // 
-            // colDiem
-            // 
-            this.colDiem.DataPropertyName = "Diem";
-            this.colDiem.HeaderText = "Điểm";
-            this.colDiem.MinimumWidth = 6;
-            this.colDiem.Name = "colDiem";
-            this.colDiem.ReadOnly = true;
-            this.colDiem.FillWeight = 50F;
-            // 
-            // colXepLoai
-            // 
-            this.colXepLoai.DataPropertyName = "XepLoai";
-            this.colXepLoai.HeaderText = "Xếp loại";
-            this.colXepLoai.MinimumWidth = 6;
-            this.colXepLoai.Name = "colXepLoai";
-            this.colXepLoai.ReadOnly = true;
-            this.colXepLoai.FillWeight = 70F;
+            this.btnQuanLyLop.FlatAppearance.BorderSize = 0;
+            this.btnQuanLyLop.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuanLyLop.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnQuanLyLop.ForeColor = System.Drawing.Color.White;
+            this.btnQuanLyLop.Location = new System.Drawing.Point(13, 340);
+            this.btnQuanLyLop.Margin = new System.Windows.Forms.Padding(4);
+            this.btnQuanLyLop.Name = "btnQuanLyLop";
+            this.btnQuanLyLop.Size = new System.Drawing.Size(170, 42);
+            this.btnQuanLyLop.TabIndex = 12;
+            this.btnQuanLyLop.Text = "Quản lý lớp";
+            this.btnQuanLyLop.UseVisualStyleBackColor = true;
             // 
             // fXemBangDiem
             // 
@@ -748,5 +764,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn colLanThi;
         private System.Windows.Forms.DataGridViewTextBoxColumn colDiem;
         private System.Windows.Forms.DataGridViewTextBoxColumn colXepLoai;
+        private System.Windows.Forms.Button btnQuanLyLop;
     }
 }
