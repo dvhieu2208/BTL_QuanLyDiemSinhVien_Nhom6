@@ -25,7 +25,7 @@ namespace QuanLyDiemSinhVien
 
             cboKhoa.SelectedIndexChanged += (s, e) => { if (!dangNap) DoiKhoa(); };
             cboLop.SelectedIndexChanged += (s, e) => { if (!dangNap) TaiDanhSach(); };
-            cboTinhTrang.SelectedIndexChanged += (s, e) => { if (!dangNap) TaiDanhSach(); };
+            cboChuyenNganh.SelectedIndexChanged += (s, e) => { if (!dangNap) TaiDanhSach(); };
             txtTimKiem.KeyDown += (s, e) =>
             {
                 if (e.KeyCode == Keys.Enter) { e.SuppressKeyPress = true; TaiDanhSach(); }
@@ -61,7 +61,7 @@ namespace QuanLyDiemSinhVien
         {
             string maKhoa = GiaoDien.GiaTri(cboKhoa);
             GiaoDien.GanCombo(cboLop, danhMuc.LayLopTheoKhoa(maKhoa), "MaLop", "MaLop", true);
-            GiaoDien.GanCombo(cboTinhTrang, danhMuc.LayChuyenNganhTheoKhoa(maKhoa), "MaChuyenNganh", "TenChuyenNganh", true);
+            GiaoDien.GanCombo(cboChuyenNganh, danhMuc.LayChuyenNganhTheoKhoa(maKhoa), "MaChuyenNganh", "TenChuyenNganh", true);
         }
 
         private void DoiKhoa()
@@ -87,7 +87,7 @@ namespace QuanLyDiemSinhVien
             try
             {
                 DataTable dt = bll.TimKiem(GiaoDien.GiaTri(cboKhoa), GiaoDien.GiaTri(cboLop),
-                    GiaoDien.GiaTri(cboTinhTrang), null, txtTimKiem.Text.Trim());
+                    GiaoDien.GiaTri(cboChuyenNganh), null, txtTimKiem.Text.Trim());
                 phanTrang.GanDuLieu(dt);
             }
             catch (Exception ex)
@@ -131,7 +131,6 @@ namespace QuanLyDiemSinhVien
             else GiaoDien.Loi(loi);
         }
 
-        // ---- Các hàm sự kiện do Designer tạo sẵn ----
         private void label8_Click(object sender, EventArgs e) { }
         private void button19_Click(object sender, EventArgs e) { }
         private void button13_Click(object sender, EventArgs e) { }

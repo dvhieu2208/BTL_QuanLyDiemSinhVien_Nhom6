@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(fSinhVien));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -54,7 +54,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.cboKhoa = new System.Windows.Forms.ComboBox();
             this.cboLop = new System.Windows.Forms.ComboBox();
-            this.cboTinhTrang = new System.Windows.Forms.ComboBox();
+            this.cboChuyenNganh = new System.Windows.Forms.ComboBox();
             this.dgvDanhSach = new System.Windows.Forms.DataGridView();
             this.colMaSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.colTenSV = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -365,14 +365,14 @@
             this.cboLop.Size = new System.Drawing.Size(139, 30);
             this.cboLop.TabIndex = 6;
             // 
-            // cboTinhTrang
+            // cboChuyenNganh
             // 
-            this.cboTinhTrang.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cboTinhTrang.FormattingEnabled = true;
-            this.cboTinhTrang.Location = new System.Drawing.Point(552, 210);
-            this.cboTinhTrang.Name = "cboTinhTrang";
-            this.cboTinhTrang.Size = new System.Drawing.Size(139, 30);
-            this.cboTinhTrang.TabIndex = 6;
+            this.cboChuyenNganh.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboChuyenNganh.FormattingEnabled = true;
+            this.cboChuyenNganh.Location = new System.Drawing.Point(552, 210);
+            this.cboChuyenNganh.Name = "cboChuyenNganh";
+            this.cboChuyenNganh.Size = new System.Drawing.Size(139, 30);
+            this.cboChuyenNganh.TabIndex = 6;
             // 
             // dgvDanhSach
             // 
@@ -422,8 +422,8 @@
             // colNgaySinh
             // 
             this.colNgaySinh.DataPropertyName = "NgaySinh";
-            dataGridViewCellStyle2.Format = "dd/MM/yyyy";
-            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Format = "dd/MM/yyyy";
+            this.colNgaySinh.DefaultCellStyle = dataGridViewCellStyle1;
             this.colNgaySinh.FillWeight = 80F;
             this.colNgaySinh.HeaderText = "Ngày sinh";
             this.colNgaySinh.MinimumWidth = 6;
@@ -578,7 +578,7 @@
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.button13);
             this.Controls.Add(this.dgvDanhSach);
-            this.Controls.Add(this.cboTinhTrang);
+            this.Controls.Add(this.cboChuyenNganh);
             this.Controls.Add(this.cboLop);
             this.Controls.Add(this.cboKhoa);
             this.Controls.Add(this.label8);
@@ -630,7 +630,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.ComboBox cboKhoa;
         private System.Windows.Forms.ComboBox cboLop;
-        private System.Windows.Forms.ComboBox cboTinhTrang;
+        private System.Windows.Forms.ComboBox cboChuyenNganh;
         private System.Windows.Forms.DataGridView dgvDanhSach;
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button btn2;

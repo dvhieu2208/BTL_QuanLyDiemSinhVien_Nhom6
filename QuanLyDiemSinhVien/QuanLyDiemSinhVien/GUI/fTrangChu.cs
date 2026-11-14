@@ -50,11 +50,11 @@ namespace QuanLyDiemSinhVien
         {
             try
             {
-                label9.Text = bll.GetTongSinhVien().ToString();
-                label11.Text = bll.GetTongLop().ToString();
-                label15.Text = bll.GetTongMonHoc().ToString();
+                lbTongSinhVien.Text = bll.GetTongSinhVien().ToString();
+                lbTongLopHoc.Text = bll.GetTongLop().ToString();
+                lbTongMonHoc.Text = bll.GetTongMonHoc().ToString();
                 decimal tyLe = bll.GetTyLeDat();
-                label18.Text = tyLe.ToString("0.00") + "%";
+                lbTyLeDat.Text = tyLe.ToString("0.00") + "%";
             }
             catch (Exception ex)
             {
@@ -73,16 +73,16 @@ namespace QuanLyDiemSinhVien
             {
                 DataTable dt = bll.GetThongKeKetQua();
 
-                chart1.Series.Clear();
-                chart1.Titles.Clear();
-                chart1.ChartAreas.Clear(); // Thêm dòng này để làm sạch khu vực biểu đồ cũ
+                chBieuDo.Series.Clear();
+                chBieuDo.Titles.Clear();
+                chBieuDo.ChartAreas.Clear(); // Thêm dòng này để làm sạch khu vực biểu đồ cũ
 
                 // Tạo ChartArea cho biểu đồ cột
                 ChartArea chartArea = new ChartArea("MainArea");
                 chartArea.AxisX.MajorGrid.Enabled = false; // Tắt lưới dọc cho gọn (tùy chọn)
                 chartArea.AxisY.MajorGrid.LineColor = Color.LightGray;
                 chartArea.AxisX.Interval = 1; // Hiển thị đầy đủ tất cả tên các cột trên trục X
-                chart1.ChartAreas.Add(chartArea);
+                chBieuDo.ChartAreas.Add(chartArea);
 
 
                 Series series = new Series("Xếp loại");
@@ -111,12 +111,12 @@ namespace QuanLyDiemSinhVien
                     else if (label.Contains("Học lại")) pt.Color = Color.FromArgb(149, 165, 166); // Xám
                 }
 
-                chart1.Series.Add(series);
+                chBieuDo.Series.Add(series);
 
                 // Kiểm tra và bật Legend nếu tồn tại
-                if (chart1.Legends.Count > 0)
+                if (chBieuDo.Legends.Count > 0)
                 {
-                    chart1.Legends[0].Enabled = true;
+                    chBieuDo.Legends[0].Enabled = true;
                 }
             }
             catch (Exception ex)
